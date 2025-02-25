@@ -1,14 +1,14 @@
 ---
 layout: home
 
-language: es
+language: en
 language_reference: index
 ---
 <div class="flex" style=" padding-top:3rem; padding-bottom:3rem; justify-content: center">
   <img 
     src="{%- if page.language == 'es' -%}
     {{ site.baseurl }}/assets/img/logo.png
-    {%- else -%}{{ site.baseurl }}/assets/img/logo-en.png
+    {%- else -%}{{ site.baseurl }}/assets/img/logo.png
     {%- endif -%}"
   />
 </div>

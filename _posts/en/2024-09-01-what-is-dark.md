@@ -15,11 +15,21 @@ published: true
 
 ---
 
-The advancement of Open Science largely depends on the development of standardized metrics that can measure the usage and impact of research. Traditionally, indicators like citations and journal impact factors have been used for this purpose, but they are insufficient to capture the full spectrum of how research outcomes are utilized by society.
+dArk (decentralized Ark) is an ARK implementation based on institutional blockchain nodes, organized in one or more interoperable networks. The power of this technological foundation lies in the fact that the data is owned, stored, and controlled not by a single organization but by all participants in a “public good” network.
 
-LA Referencia, as a key player in the academic community of Latin America, has led efforts to introduce common usage statistics that complement existing metrics. This project aims to provide a more comprehensive view of how research outputs are used, both by the scientific community and the general public. Through the development of a robust usage statistics service, LA Referencia is moving toward a deeper understanding and increased visibility of the impact of open research.
+The long-term objective is to provide an open and non-centralized unique/deduplicated persistent identifier factory and resolution service for the global Open Science ecosystem, based on permissioned public blockchain technology.
 
-During the 2023/2024 cycle, the LA Referencia Usage Statistics project, with funding support from SCOSS, underwent significant advancements. It migrated to a more flexible and scalable architecture, improving the system's reliability and enabling the integration of new tools. Key achievements include the implementation of more efficient event tracking, optimization of data storage through solutions like Amazon S3, and improvements in bot detection to ensure metric accuracy. Additionally, an advanced identifier normalization system was introduced, and custom widgets were developed for repositories, facilitating greater interaction and analysis of usage data. These advancements enhance LA Referencia's ability to provide a more accurate and detailed view of research usage in the region.
+ARK identifier has emerged as a viable, low-cost alternative solution due to the potential implementation of internal providers for the global resolver.
+
+Some of the motivations for this project are as follows:
+
+(i) The need for not only persistent but also unique/deduplicated identifiers to build more robust research graphs, indicators, and research assessment inputs. 
+
+(ii) Lack of PID coverage in Global South repositories primarily due to the costs associated with those services for institutions. 
+
+(iii) Most persistent identifier systems are based on centralized models, relying on a few agencies that support the service infrastructure.
+
+This development is not intended to be a replacement or competition for DOI identifiers/agencies but as a complementary solution that will also be interoperable with DOI providers.
 
 <br>  
 <br>  
