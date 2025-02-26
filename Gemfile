@@ -1,34 +1,22 @@
 source "https://rubygems.org"
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-gem "jekyll", "~> 3.9.3"
+# This configuration is optimized for GitHub Pages
+# For local development, you can use: bundle exec jekyll serve
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5.1"
+# GitHub Pages compatible dependencies
+gem "github-pages", group: :jekyll_plugins
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-
-# Required for Jekyll 3.9 with Ruby 3.0+
+# Required for Ruby 3.0+
 gem "webrick", "~> 1.8"
-gem "kramdown-parser-gfm"
 
-# Custom plugins
+# Custom project tools (not used by GitHub Pages)
 gem 'thor'
 gem 'stringex'
 
-# If you have any plugins, put them here!
+# Plugins supported by GitHub Pages
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.15.1"
-  gem "jekyll-seo-tag", "~> 2.8.0"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
