@@ -4,21 +4,23 @@ layout: default
 <div class="home">
   <section class="hero my-8">
     <div class="card">
-      <h1>
-        {% if page.language == "es" %}
-          {{ site.title | escape }}
-        {% elsif page.language == "pt" %}
-          {{ site.title_pt | escape }}
-        {% else %}
-          {{ site.title_en | escape }}
-        {% endif %}
-      </h1>
+      <div class="text-center">
+        <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="dARK Logo" class="hero-logo">
+        <h1>
+          {% if page.language == "es" %}
+            {{ site.title | escape }}
+          {% elsif page.language == "pt" %}
+            {{ site.title_pt | escape }}
+          {% else %}
+            {{ site.title_en | escape }}
+          {% endif %}
+        </h1>
+      </div>
       <p class="lead">
         {{ site.description }}
       </p>
-      <div class="flex gap-4 mt-4">
-        <a href="https://github.com/{{ site.github_username }}" class="btn btn-primary">GitHub</a>
-        <a href="#learn-more" class="btn btn-outline">Learn More</a>
+      <div class="flex gap-4 mt-4 justify-center">
+        <a href="#learn-more" class="btn btn-primary">Learn More</a>
       </div>
     </div>
   </section>
