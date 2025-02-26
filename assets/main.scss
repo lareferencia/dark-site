@@ -2,73 +2,354 @@
 ---
 @import "minima";
 
-// Your CSS here
+// Custom variables
+:root {
+  --primary-color: #2a7ae2;
+  --primary-dark: #1756a9;
+  --secondary-color: #333;
+  --accent-color: #f0f7ff;
+  --text-color: #333;
+  --text-light: #767676;
+  --border-color: #e8e8e8;
+  --background-light: #f9f9f9;
+  --box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  --transition: all 0.3s ease;
+}
 
+// Base styles
 body {
-    font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+a {
+  color: var(--primary-color);
+  transition: var(--transition);
+  
+  &:hover {
+    color: var(--primary-dark);
+  }
+}
+
+// Layout
+.wrapper {
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+// Header styles
+.site-header {
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  min-height: 70px;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  position: relative;
 }
 
 .site-title {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 54px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 70px;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+  float: left;
+  display: flex;
+  align-items: center;
+  
+  &:hover {
+    text-decoration: none;
+  }
+  
+  img {
+    margin-right: 10px;
+    max-height: 40px;
+  }
 }
 
-.post-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
+.site-nav {
+  float: right;
+  line-height: 70px;
+  
+  .nav-item {
+    color: var(--text-color);
+    margin-left: 20px;
+    font-size: 16px;
+    transition: var(--transition);
     
-} 
-.post-item p {
-    margin-bottom: 0.5rem;
-    font-size: 1.0rem;
-    font-weight: 400;
+    &:hover {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+  }
+  
+  .active {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+}
+
+// Content styles
+.page-content {
+  padding: 60px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+// Post styles
+.post-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  }
+  
+  p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: var(--text-color);
     margin-top: 0.5rem;
+  }
 }
 
 .post-item-title {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  
+  a {
+    color: var(--secondary-color);
+    
+    &:hover {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+  }
 }
 
 .post-item-excerpt {
-    margin-bottom: 0.5rem;
-    font-size: 1.0rem;
-    font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
 }
 
-// eliminate bullet points on posts
+// Post list
 .post-item-list {
-    list-style-type: none;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
-// eliminate visited link color
-.post-item a:visited, .post-item a:active {
-    color: rgb(42, 122, 226);
+// Post links
+.post-item a {
+  color: var(--primary-color);
+  
+  &:visited, &:active {
+    color: var(--primary-color);
+  }
+  
+  &:hover {
+    color: var(--primary-dark);
+  }
 }
+
+// Utility classes
 .flex {
-    display: flex;
+  display: flex;
 }
 
-.en:lang(en), .es:lang(es){
-    font-weight: bold;
+.flex-col {
+  flex-direction: column;
 }
 
-.active {
-    font-weight: bold;
+.justify-between {
+  justify-content: space-between;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+// Cards
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  
+  &-primary {
+    background-color: var(--primary-color);
+    color: white;
+    
+    &:hover {
+      background-color: var(--primary-dark);
+      color: white;
+      text-decoration: none;
+    }
+  }
+  
+  &-outline {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    
+    &:hover {
+      background-color: var(--accent-color);
+      text-decoration: none;
+    }
+  }
+}
+
+// Language selector
+.en:lang(en), .es:lang(es), .pt:lang(pt) {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+// Navigation
 .nav-item {
-    transition: all 0.2s ease-in-out;
+  transition: var(--transition);
 }
 
 .nav-item:hover {
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+// Footer styles
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 40px 0;
+  background-color: var(--background-light);
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.footer-col-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+}
+
+.footer-col {
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
+.footer-col-1,
+.footer-col-2 {
+  width: 35%;
+}
+
+.footer-col-3 {
+  width: 30%;
+}
+
+.social-media-list,
+.contact-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+// Responsive
+@media screen and (max-width: 800px) {
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3 {
+    width: 100%;
+  }
+  
+  .site-nav {
+    float: none;
+    line-height: normal;
+    padding: 15px 0;
+    text-align: center;
+    
+    .nav-item {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  
+  .site-title {
+    float: none;
+    text-align: center;
+    line-height: normal;
+    padding: 15px 0;
+    display: block;
+  }
 }

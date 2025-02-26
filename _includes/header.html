@@ -1,5 +1,4 @@
 <header class="site-header">
-
   <div class="wrapper">
     <a class="site-title nav-item" 
       href="{% if page.language == "es" %}
@@ -9,7 +8,9 @@
       {% else %}
         {{ "/en/home" | relative_url }}
       {% endif %}">
-
+      
+      <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="dARK Logo">
+      
       {% if page.language == "es" %}
         {{ site.title | escape }}
       {% elsif page.language == "pt" %}
@@ -17,11 +18,11 @@
       {% else %}
         {{ site.title_en | escape }}
       {% endif %}
-
     </a>
+    
     <nav class="site-nav">
       {% include navigation.html %}
+      {% include language-switch.html %}
     </nav>
   </div>
-
 </header>
