@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 'dARK - Descentralized Archival Resource Key'
-title_en: 'dARK - Descentralized Archival Resource Key'
-title_pt: 'dARK - Descentralized Archival Resource Key'
+title: 'dARK - Decentralized Archival Resource Key'
+title_en: 'dARK - Decentralized Archival Resource Key'
+title_pt: 'dARK - Decentralized Archival Resource Key'
 
-description: 'A descentralized implmentation of the ARK persistent identifier'
+description: 'A decentralized implementation of the ARK persistent identifier'
 
 baseurl: '' # the subpath of your site, e.g. /blog
 absolute_url: 'https://www.dark-pid.net/'
@@ -38,8 +38,9 @@ fallback_page: 'home'
 # Build settings
 theme: minima
 
-# plugins:
-#   - jekyll-feed
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 markdown: kramdown
 page_excerpts: true
 excerpt_separator: <!--more-->
