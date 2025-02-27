@@ -1,0 +1,50 @@
+title: 'dARK - Descentralized Archival Resource Key'
+title_en: 'dARK - Descentralized Archival Resource Key'
+title_pt: 'dARK - Descentralized Archival Resource Key'
+
+description: 'A descentralized implementation of the ARK persistent identifier'
+
+baseurl: '' 
+url: 'https://www.dark-pid.net'
+absolute_url: 'https://www.dark-pid.net'
+
+email: soporte@lareferencia.redclara.net
+github_username: 'dark-pid'  
+
+default_language: 'en'
+fallback_page: 'home'
+
+theme: minima
+markdown: kramdown
+page_excerpts: true
+excerpt_separator: <!--more-->
+
+include: ['_pages']
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+- scope:
+    path: '_posts/en'
+    type: 'posts'
+  values:
+    permalink: 'en/:title'
+    language: en
+- scope:
+    path: '_posts/es'
+    type: 'posts'
+  values:
+    permalink: 'es/:title'
+    language: es
+- scope:
+    path: '_posts/pt'
+    type: 'posts'
+  values:
+    permalink: 'pt/:title'
+    language: pt

@@ -1,22 +1,17 @@
 source "https://rubygems.org"
 
-# This configuration is optimized for GitHub Pages
-# For local development, you can use: bundle exec jekyll serve
-
-# GitHub Pages compatible dependencies
-gem "github-pages", group: :jekyll_plugins
-
-# Required for Ruby 3.0+
+gem "jekyll", "~> 3.9.3"
+gem "minima", "~> 2.5.1"
 gem "webrick", "~> 1.8"
+gem "kramdown-parser-gfm", "~> 1.1.0"
 
-# Custom project tools (not used by GitHub Pages)
+# Custom tools for development
 gem 'thor'
 gem 'stringex'
 
-# Plugins supported by GitHub Pages
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
+  gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-seo-tag", "~> 2.8.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
