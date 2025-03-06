@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What is dARK"  
-date:   2024-09-01 14:53:14 +0200  
+date:   2024-01-01 00:00:00 +0200  
 description:  "What is dARK"  
 language: en  
 language_reference: what-is-dark
