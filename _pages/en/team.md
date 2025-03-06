@@ -7,6 +7,8 @@ language_reference: team
 published: true  
 order: 4
 ---
+<h1 class="team-title">Meet the dARK Team</h1>
+
 
 <p class="team-intro">
   Our international team brings together experts in blockchain technology, persistent identifiers, and digital repositories from across Latin America. Together, we're building the future of decentralized archival infrastructure.
