@@ -69,6 +69,14 @@ order: 4
     <div class="team-member-org">IBICT, BRAZIL</div>
   </div>
 
+  <div class="team-member">
+    <div class="team-member-header">
+      <h3>Gabriel Marques</h3>
+      <span class="team-member-role">dARK Manager IBICT</span>
+    </div>
+    <div class="team-member-org">IBICT, BRAZIL</div>
+  </div>
+
    <div class="team-member">
     <div class="team-member-header">
       <h3>Federico Cetrangolo</h3>
