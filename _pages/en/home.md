@@ -9,12 +9,6 @@ language_reference: home
 
 ---
 
-<div class="flex" style=" padding-top:3rem; padding-bottom:3rem; justify-content: center">
-  <img 
-    src="{{ site.baseurl }}/assets/img/logo.png"
-  />
-</div>
-
 <div class="post-item"></div>
 
 {% assign posts=site.posts | where: "language", page.language | sort: 'title' | reverse %}

@@ -3,7 +3,13 @@ layout: default
 ---
 <div class="home">
   <section class="hero my-8 text-center">
-    <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="dARK Logo" class="hero-logo">
+
+    <div class="flex" style=" padding-top:3rem; padding-bottom:3rem; justify-content: center">
+      <img 
+        src="{{ site.baseurl }}/assets/img/logo.png"
+      />
+    </div>
+    <!-- <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="dARK Logo" class="hero-logo"> -->
     <h1>
       {% if page.language == "es" %}
         {{ site.title | escape }}
