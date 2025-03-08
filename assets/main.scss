@@ -50,7 +50,7 @@ a {
 }
 
 .site-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 70px;
   letter-spacing: -0.5px;
@@ -121,7 +121,7 @@ h2 {
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    // box-shadow: 0 10px 20px rgba(0,0,0,0.03);
   }
   
   p {
