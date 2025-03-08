@@ -11,6 +11,8 @@
       
       <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="dARK Logo">
       
+      <span class="site-title-text">
+        
       {% if page.language == "es" %}
         {{ site.title | escape }}
       {% elsif page.language == "pt" %}
@@ -18,6 +20,7 @@
       {% else %}
         {{ site.title_en | escape }}
       {% endif %}
+      </span>
     </a>
     
     <nav class="site-nav">

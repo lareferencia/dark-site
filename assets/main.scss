@@ -8,7 +8,7 @@
   --primary-dark: #1756a9;
   --secondary-color: #333;
   --accent-color: #f0f7ff;
-  --text-color: #333;
+  --text-color: #555;
   --text-light: #767676;
   --border-color: #e8e8e8;
   --background-light: #f9f9f9;
@@ -69,6 +69,9 @@ a {
   }
 }
 
+.site-title-text {
+  padding-top: 10px;}
+
 .site-nav {
   float: right;
   line-height: 70px;
@@ -105,11 +108,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.4rem;
   font-weight: 700;
+  color: #555;
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 600;
+  color: #555
 }
 
 // Post styles
