@@ -100,7 +100,7 @@ order: 2
   
   .funder-card.primary {
     background-color: #f0f7ff;
-    border-left: 5px solid #1a73e8;
+    border-left: 5px solid #8A3691;
   }
   
   .logo-container {
@@ -135,7 +135,7 @@ order: 2
   .funder-link {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #1a73e8;
+    color: #8A3691;
     font-weight: 500;
   }
   
@@ -176,7 +176,7 @@ order: 2
     display: inline-block;
     margin-top: 1rem;
     padding: 0.8rem 1.5rem;
-    background-color: #1a73e8;
+    background-color: #8A3691;
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -185,7 +185,7 @@ order: 2
   }
   
   .cta-button:hover {
-    background-color: #0d61cb;
+    background-color: #8A3691;
     text-decoration: none;
     color: white;
   }

@@ -159,7 +159,7 @@ order: 4
   
   .team-member-org {
     display: inline-block;
-    background-color: #3498db;
+    background-color: #8A3691;
     color: white;
     font-size: 0.8rem;
     padding: 0.2rem 0.6rem;
@@ -172,7 +172,7 @@ order: 4
   }
   
   .team-email {
-    color: #3498db;
+    color: #8A3691;
     text-decoration: none;
     font-size: 0.9rem;
     display: inline-block;
@@ -231,7 +231,7 @@ order: 4
   
   .institution-link {
     display: inline-block;
-    color: #3498db;
+    color: #8A3691;
     text-decoration: none;
   }
   
