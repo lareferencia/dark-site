@@ -485,6 +485,12 @@ h2 {
   color: white;
 }
 
+.cta-button:visited {
+  color: white;
+  background-color: var(--primary-color);
+  text-decoration: none;
+}
+
 /**
  * NOTE CONTAINERS
  * -----------------------------------------------------------------------------
@@ -679,10 +685,38 @@ h2 {
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  font-weight: 700;
+  font-size: 1rem;
   flex-shrink: 0;
+  position: relative;
+}
+
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(138, 54, 145, 0.15);
+  color: var(--primary-color);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.step-icon::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2724%27%20height%3D%2724%27%20fill%3D%27none%27%20stroke%3D%27%238A3691%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M9%2018h6M10%2022h4M12%202a7%207%200%200%201%203.621%2013.005c-.253.115-.42.3-.476.527A2.09%202.09%200%200%201%2013.073%2016H10.93a2.09%202.09%200%200%201-1.914-1.468%201.167%201.167%200%200%200-.476-.527A7%207%200%200%201%2012%202Z%27%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
 }
 
 .step-content {
@@ -1328,7 +1362,7 @@ h2 {
     flex-direction: column;
   }
   
-  .step-number {
+  .step-icon {
     margin-bottom: 1rem;
   }
   
@@ -1592,5 +1626,9 @@ h2 {
 @media (max-width: 768px) {
   .service-components {
     grid-template-columns: 1fr;
+  }
+  
+  .step-icon {
+    margin-bottom: 1rem;
   }
 }

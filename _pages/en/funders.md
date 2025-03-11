@@ -13,7 +13,6 @@ order: 2
   <p class="lead-text">The organizations that make dARK possible through their generous support</p>
 </div>
 
-## Primary Funders
 
 <div class="funder-card primary">
   <div class="logo-container">
