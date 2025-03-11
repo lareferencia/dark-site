@@ -9,11 +9,11 @@ categories: post
 published: true
 ---
 
-<h2 class="custom-heading">Introduction</h2>
+<p class="lead-highlight">
+  <strong>dARK</strong> is a decentralized implementation of <a href="https://arks.org" target="_blank">Archival Resource Key (ARK)</a> that assigns and resolves ARK identifiers through institutional blockchain nodes. It operates on a <strong>"public good"</strong> network where <strong>data ownership, storage, and control</strong> are distributed among all participating organizations.
+</p>
 
-**dARK** is a decentralized implementation of ARK that assigns and resolves ARK identifiers through institutional blockchain nodes.  
-
-**dARK** operates on a **"public good"** network where **data ownership, storage, and control** are distributed among all participating organizations. The innital project was primarily hosted and funded by the Brazilian Institute of Information in Science and Technology (IBICT), with additional support from LA Referencia, made possible thanks to the backing of the Global Sustainability Coalition for Open Science Services (SCOSS) pledges.
+The initial project was primarily hosted and funded by the Brazilian Institute of Information in Science and Technology (IBICT), with additional support from LA Referencia, made possible thanks to the backing of the Global Sustainability Coalition for Open Science Services (SCOSS) pledges.
 
 <div class="architecture-details">
   <div class="detail-box">
@@ -32,27 +32,27 @@ published: true
   </div>
 </div>
 
-<h2 class="custom-heading">Motivation</h2>
+<h2 class="custom-heading">Motivations</h2>
 
 <div class="workflow-container">
   <div class="workflow-step">
-    <div class="step-number">1</div>
+    <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Alternative Solution</h4>
+      <h4>ARK Persistent Identifier</h4>
       <p>The ARK identifier has emerged as a <strong>viable, low-cost alternative solution</strong> thanks to the potential implementation of local providers for the global resolver.</p>
     </div>
   </div>
   
   <div class="workflow-step">
-    <div class="step-number">2</div>
+    <div class="step-icon"></div>
     <div class="step-content">
       <h4>Research Assessment</h4>
-      <p><strong>Need for unique and persistent identifiers</strong> to build more robust research graphs, indicators, and research assessment inputs.</p>
+      <p><strong>Need for persistent identifiers</strong> to build more robust research graphs, indicators, and research assessment inputs.</p>
     </div>
   </div>
   
   <div class="workflow-step">
-    <div class="step-number">3</div>
+    <div class="step-icon"></div>
     <div class="step-content">
       <h4>Global South Challenges</h4>
       <p><strong>Lack of persistent identifier coverage</strong> in Global South repositories, primarily due to the costs associated with these services for institutions.</p>
@@ -60,7 +60,7 @@ published: true
   </div>
   
   <div class="workflow-step">
-    <div class="step-number">4</div>
+    <div class="step-icon"></div>
     <div class="step-content">
       <h4>Decentralization Need</h4>
       <p>Most persistent identifier systems are <strong>based on centralized models</strong>, relying on a few agencies that support the service infrastructure.</p>

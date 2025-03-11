@@ -18,19 +18,61 @@ The dARK system architecture is designed with a clear separation of components, 
 
 The Service Layer provides essential services that interface with the Core Layer components. These services include:
 
-| Service | Description |
-|---------|-------------|
-| **dARK Resolver** | Integrated with the global nt2.info resolver system, enabling persistent identifier resolution |
-| **dARK Minter** | Used to create and register new PIDs in the system |
-| **dARK Dashboard** | Provides monitoring and administrative capabilities for the platform |
-| **dARK API** | Facilitates communication between applications and the underlying blockchain |
-| **dARK Backup** | Ensures data durability and system reliability |
+<div class="service-components">
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">dARK Resolver</a></h4>
+    <p>Integrated with the global nt2.info resolver system, enabling persistent identifier resolution</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">dARK Minter</a></h4>
+    <p>Used to create and register new PIDs in the system</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">dARK Dashboard</a></h4>
+    <p>Provides monitoring and administrative capabilities for the platform</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">dARK API</a></h4>
+    <p>Facilitates communication between applications and the underlying blockchain</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK Backup</a></h4>
+    <p>Ensures data durability and system reliability</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+</div>
 
 These services are supported by load balancing mechanisms to ensure high availability and optimal system performance.
 
 <h2 class="custom-heading">Core Layer (dARK dApp)</h2>
 
 The Core Layer is built on a permissioned blockchain network that forms the backbone of the dARK system. At its heart is a public permissioned network operating on a Proof of Authority (PoA) consensus mechanism, providing both security and efficiency for PID management.
+
+<div class="service-item core-app">
+  <h4><a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">dARK dApp</a></h4>
+  <p>Core decentralized application that implements the PID management smart contracts and ensures data integrity through blockchain technology</p>
+  <div class="code-access">
+    <a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">Access source code on GitHub</a>
+  </div>
+</div>
 
 <h3 class="custom-heading-secondary">Blockchain Foundation</h3>
 
