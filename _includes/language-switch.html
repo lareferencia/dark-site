@@ -1,49 +1,89 @@
-{%- for language in snippets.languages %}
-  {%- if language[1].slug != page.language %}
-    {%- if page.layout == 'page' %}
-      {%- assign navigation_pages = site.pages
-        | where: 'language_reference', page.language_reference
-        | where: 'language', language[1].slug %}
-      {%- if navigation_pages.size == 1 %}
-        {%- for navigation_page in navigation_pages %}
-          {%- assign url = navigation_page.url %}
-        {%- endfor %}
-      {%- else %}
-        {%- assign navigation_pages = site.pages
-          | where: 'language_reference', site.fallback_page
-          | where: 'language', language[1].slug %}
-        {%- for navigation_page in navigation_pages %}
-          {%- assign url = navigation_page.url %}
-        {%- endfor %}
-      {%- endif %}
+<div class="language-switch">
+  {% if page.language_reference %}
+    {% assign other_languages = site.pages | where: "language_reference", page.language_reference %}
+  {% endif %}
+  
+  {% if page.language == "en" %}
+    <a class="lang-link active" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">EN</a>
+  {% else %}
+    {% for other_page in other_languages %}
+      {% if other_page.language == "en" %}
+        <a class="lang-link" href="{{ site.url }}{{ site.baseurl }}{{ other_page.url }}">EN</a>
+      {% endif %}
+    {% endfor %}
+    {% if other_languages | where: "language", "en" | size == 0 %}
+      <span class="lang-link disabled">EN</span>
+    {% endif %}
+  {% endif %}
+  
+  {% if page.language == "es" %}
+    <a class="lang-link active" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">ES</a>
+  {% else %}
+    {% for other_page in other_languages %}
+      {% if other_page.language == "es" %}
+        <a class="lang-link" href="{{ site.url }}{{ site.baseurl }}{{ other_page.url }}">ES</a>
+      {% endif %}
+    {% endfor %}
+    {% if other_languages | where: "language", "es" | size == 0 %}
+      <span class="lang-link disabled">ES</span>
+    {% endif %}
+  {% endif %}
+  
+  {% if page.language == "pt" %}
+    <a class="lang-link active" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">PT</a>
+  {% else %}
+    {% for other_page in other_languages %}
+      {% if other_page.language == "pt" %}
+        <a class="lang-link" href="{{ site.url }}{{ site.baseurl }}{{ other_page.url }}">PT</a>
+      {% endif %}
+    {% endfor %}
+    {% if other_languages | where: "language", "pt" | size == 0 %}
+      <span class="lang-link disabled">PT</span>
+    {% endif %}
+  {% endif %}
+</div>
 
-    {%- elsif page.layout == 'post' %}
-      {%- assign navigation_posts = site.posts
-        | where: 'language_reference', page.language_reference
-        | where: 'language', language[1].slug %}
-      {%- if navigation_posts.size == 1 %}
-        {%- for navigation_post in navigation_posts %}
-          {%- assign url = navigation_post.url %}
-        {%- endfor %}
-      {%- else %}
-        {%- assign navigation_pages = site.pages
-          | where: 'language_reference', site.fallback_page
-          | where: 'language', language[1].slug %}
-        {%- for navigation_page in navigation_pages %}
-          {%- assign url =  navigation_page.url %}
-        {%- endfor %}
-      {%- endif %}
-
-    {%- else %}
-      {%- assign navigation_pages = site.pages
-        | where: 'language_reference', site.fallback_page
-        | where: 'language', language[1].slug %}
-      {%- for navigation_page in navigation_pages %}
-        {%- assign url =  navigation_page.url %}
-      {%- endfor %}
-    {%- endif %}
-    <a class="nav-item" href="{{site.baseurl}}{{ url }}">
-      {{ language[1].value }}
-    </a>
-  {%- endif %}
-{%- endfor %}
+<style>
+  .language-switch {
+    display: flex;
+    align-items: center;
+  }
+  
+  .lang-link {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.1rem;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .lang-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .lang-link:hover:not(.disabled) {
+    color: #8A3691;
+    background-color: rgba(138, 54, 145, 0.05);
+  }
+  
+  .lang-link.active {
+    color: white;
+    background-color: #8A3691;
+  }
+  
+  @media (max-width: 768px) {
+    .language-switch {
+      justify-content: center;
+    }
+    
+    .lang-link {
+      padding: 0.4rem 0.8rem;
+      margin: 0 0.2rem;
+    }
+  }
+</style>

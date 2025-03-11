@@ -1,22 +1,123 @@
-{%- assign navigation_pages = site.pages
-    | where: 'layout', 'page'
-    | where: 'language', page.language
-    | where: 'published', true
-    | sort: 'order' %}
-  {%- for navigation_page in navigation_pages %}
+<div class="navigation-container">
+  {%- assign navigation_pages = site.pages
+      | where: 'layout', 'page'
+      | where: 'language', page.language
+      | where: 'published', true
+      | sort: 'order' %}
+  
+  <div class="nav-links">
+    {%- for navigation_page in navigation_pages %}
+      {%- if page.url == navigation_page.url %}
+        <a class="page-link active nav-item" href="{{ site.baseurl }}{{ navigation_page.url }}">
+          {{ navigation_page.title }}
+        </a>
+      {%- else %}
+        <a class="page-link nav-item" href="{{ site.baseurl }}{{ navigation_page.url }}">
+          {{ navigation_page.title }}
+        </a>
+      {%- endif %}
+    {%- endfor %}
+  </div>
 
-    {%- if page.url == navigation_page.url %}
-      <a class="page-link active nav-item" href="{{ site.baseurl }}{{ navigation_page.url }}">
-        {{ navigation_page.title }}
-      </a>
-    {%- else %}
-      <a class="page-link nav-item" href="{{ site.baseurl }}{{ navigation_page.url }}">
-        {{ navigation_page.title }}
-      </a>
-    {%- endif %}
+  <div class="language-switcher">
+    <span class="language-divider">|</span>
+    {% include language-switch.html %}
+  </div>
+</div>
 
-  {%- endfor %}
+<style>
+  .navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .page-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .page-link:hover {
+    color: #8A3691;
+  }
+  
+  .page-link.active {
+    color: #8A3691;
+  }
+  
+  .page-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 1rem;
+    right: 1rem;
+    height: 3px;
+    background-color: #8A3691;
+    border-radius: 2px;
+  }
+  
+  .language-switcher {
+    display: flex;
+    align-items: center;
+  }
+  
+  .language-divider {
+    margin: 0 1rem;
+    color: #ddd;
+  }
 
-  <span style="margin-right: 1rem;">|</span> {% include language-switch.html %}
+  @media (max-width: 768px) {
+    .navigation-container {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+    }
+    
+    .page-link {
+      padding: 0.75rem 1rem;
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid #eee;
+      font-size: 1.1rem;
+    }
+    
+    .page-link.active::after {
+      display: none;
+    }
+    
+    .page-link.active {
+      background-color: rgba(138, 54, 145, 0.1);
+    }
+    
+    .language-switcher {
+      width: 100%;
+      padding: 1rem;
+      justify-content: center;
+      border-top: 1px solid #eee;
+      margin-top: 0.5rem;
+    }
+    
+    .language-divider {
+      display: none;
+    }
+  }
+</style>
 
 
