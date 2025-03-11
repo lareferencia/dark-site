@@ -5,7 +5,7 @@ description: Our team members working on the dARK project
 language: en  
 language_reference: team
 published: true  
-order: 4
+order: 1
 ---
 <h1 class="team-title">Meet the dARK Team</h1>
 

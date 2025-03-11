@@ -96,7 +96,7 @@ order: 2
 <div class="support-cta">
   <h2>Interested in Supporting dARK?</h2>
   <p>Join the growing community of organizations helping to build a sustainable, decentralized persistent identifier infrastructure for global open science.</p>
-  <a href="{{ site.baseurl }}/en/contact" class="cta-button">Contact Us About Supporting dARK</a>
+  <a href="{{ site.baseurl }}/en/contact#supporting-dark-as-a-funder" class="cta-button">Contact Us About Supporting dARK</a>
 </div>
 
 <style>
