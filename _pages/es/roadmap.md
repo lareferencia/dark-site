@@ -1,8 +1,8 @@
 ---
 layout: page
 
-title: "Roadmap"
-description: Roadmap
+title: "Hoja de Ruta"
+description: Hoja de Ruta
 
 language: es
 language_reference: roadmap
@@ -11,4 +11,4 @@ published: false
 order: 3
 ---
 
-under construction
+En construcción

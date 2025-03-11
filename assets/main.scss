@@ -2,10 +2,16 @@
 ---
 @import "minima";
 
+/**
+ * =============================================================================
+ * VARIABLES
+ * =============================================================================
+ */
+
 // Custom variables
 :root {
   --primary-color: #8A3691;
-  --primary-dark: #555;;
+  --primary-dark: #555;
   --secondary-color: #333;
   --accent-color: #f0f7ff;
   --text-color: #555;
@@ -16,7 +22,12 @@
   --transition: all 0.3s ease;
 }
 
-// Base styles
+/**
+ * =============================================================================
+ * BASE STYLES
+ * =============================================================================
+ */
+
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -33,19 +44,62 @@ a {
   }
 }
 
-// Layout
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/**
+ * =============================================================================
+ * LAYOUT
+ * =============================================================================
+ */
+
 .wrapper {
   max-width: 1000px;
   padding: 0 20px;
 }
 
-// Header styles
+.page-content {
+  padding: 60px 0;
+}
+
+/**
+ * =============================================================================
+ * HEADER
+ * =============================================================================
+ */
+
 .site-header {
   border-top: 5px solid var(--primary-color);
   border-bottom: 1px solid var(--border-color);
   min-height: 70px;
   background-color: white;
   box-shadow: var(--box-shadow);
+  position: relative;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   position: relative;
 }
 
@@ -70,7 +124,33 @@ a {
 }
 
 .site-title-text {
-  padding-top: 10px;}
+  padding-top: 10px;
+}
+
+// Menú hamburguesa para móviles
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+/**
+ * =============================================================================
+ * NAVIGATION
+ * =============================================================================
+ */
 
 .site-nav {
   float: right;
@@ -94,30 +174,130 @@ a {
   }
 }
 
-// Content styles
-.page-content {
-  padding: 60px 0;
+.nav-item {
+  transition: var(--transition);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
+.nav-item:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/**
+ * MAIN NAVIGATION
+ * -----------------------------------------------------------------------------
+ */
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.page-link {
+  position: relative;
+  padding: 0.5rem 1rem;
   color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #555;
+.page-link:hover {
+  color: var(--primary-color);
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #555
+.page-link.active {
+  color: var(--primary-color);
 }
 
-// Post styles
+.page-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 1rem;
+  right: 1rem;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.language-divider {
+  margin: 0 1rem;
+  color: #ddd;
+}
+
+// Language selector
+.en:lang(en), .es:lang(es), .pt:lang(pt) {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/**
+ * LANGUAGE SWITCHER
+ * -----------------------------------------------------------------------------
+ */
+.language-switch {
+  display: flex;
+  align-items: center;
+}
+  
+  .lang-link {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.1rem;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .lang-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .lang-link:hover:not(.disabled) {
+    color: #8A3691;
+    background-color: rgba(138, 54, 145, 0.05);
+  }
+  
+  .lang-link.active {
+    color: white;
+    background-color: #8A3691;
+  }
+  
+  @media (max-width: 768px) {
+    .language-switch {
+      justify-content: center;
+    }
+    
+    .lang-link {
+      padding: 0.4rem 0.8rem;
+      margin: 0 0.2rem;
+    }
+  }
+
+
+/**
+ * =============================================================================
+ * POSTS STYLES
+ * =============================================================================
+ */
+
 .post-item {
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
@@ -179,32 +359,16 @@ h2 {
   }
 }
 
-// Utility classes
-.flex {
-  display: flex;
-}
+/**
+ * =============================================================================
+ * COMPONENTS
+ * =============================================================================
+ */
 
-.flex-col {
-  flex-direction: column;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-// Hero section
+/**
+ * HERO SECTION
+ * -----------------------------------------------------------------------------
+ */
 .hero-logo {
   max-width: 200px;
   height: auto;
@@ -223,37 +387,10 @@ h2 {
   text-align: center;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-// Cards
+/**
+ * CARDS
+ * -----------------------------------------------------------------------------
+ */
 .card {
   background-color: white;
   border-radius: 8px;
@@ -267,7 +404,10 @@ h2 {
   }
 }
 
-// Buttons
+/**
+ * BUTTONS
+ * -----------------------------------------------------------------------------
+ */
 .btn {
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -301,137 +441,28 @@ h2 {
   }
 }
 
-// Language selector
-.en:lang(en), .es:lang(es), .pt:lang(pt) {
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-// Navigation
-.nav-item {
-  transition: var(--transition);
-}
-
-.nav-item:hover {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-// Footer styles
-.site-footer {
-  border-top: 1px solid var(--border-color);
-  padding: 40px 0 20px;
-  background-color: var(--background-light);
-  margin-top: 60px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.footer-branding {
-  display: flex;
-  align-items: center;
-}
-
-.footer-logo {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
-}
-
-.footer-title {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--secondary-color);
-}
-
-.footer-links {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-link {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 0.9rem;
-  padding: 5px 0;
-  position: relative;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-  }
-  
-  &:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-    
-    &:after {
-      width: 100%;
-    }
-  }
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-light);
-  font-size: 0.9rem;
-}
-
-.footer-copyright {
-  opacity: 0.8;
-}
-
-.footer-tagline {
-  max-width: 60%;
-  text-align: right;
-  opacity: 0.8;
-}
-
-// Section headers and titles
-.custom-heading {
-  font-size: 1.4rem;
-  color: var(--primary-color);
-  position: relative;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 600;
-  border-bottom: 2px solid #eaeaea;
-}
-
-.custom-heading::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 60px;
-  height: 2px;
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
   background-color: var(--primary-color);
-}
-
-.custom-heading-secondary {
-  font-size: 1.2rem;
-  color: #555;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
   font-weight: 500;
+  transition: background-color 0.2s;
 }
 
-// Note containers
+.cta-button:hover {
+  background-color: var(--primary-color);
+  text-decoration: none;
+  color: white;
+}
+
+/**
+ * NOTE CONTAINERS
+ * -----------------------------------------------------------------------------
+ */
 .note-container {
   margin: 2.5rem 0;
   background-color: #f8f9fe;
@@ -439,7 +470,8 @@ h2 {
   box-shadow: 0 2px 10px rgba(138, 54, 145, 0.08);
   overflow: hidden;
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .note-header {
@@ -466,6 +498,7 @@ h2 {
   width: 100%;
   display: block;
   box-sizing: border-box;
+  flex: 1;
 }
 
 .note-container ul {
@@ -503,7 +536,48 @@ h2 {
   box-sizing: border-box;
 }
 
-// Architecture page styles
+/**
+ * SECTION HEADERS AND TITLES
+ * -----------------------------------------------------------------------------
+ */
+.custom-heading {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.custom-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.custom-heading-secondary {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/**
+ * =============================================================================
+ * PAGE SPECIFIC STYLES
+ * =============================================================================
+ */
+
+/**
+ * ARCHITECTURE PAGE
+ * -----------------------------------------------------------------------------
+ */
 .architecture-details {
   display: flex;
   flex-wrap: wrap;
@@ -523,7 +597,35 @@ h2 {
 .detail-box h4 {
   color: var(--primary-color);
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px dashed rgba(138, 54, 145, 0.2);
+}
+
+.detail-box h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 35px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.detail-box p {
+  color: var(--text-color);
+  margin-bottom: 0;
+  line-height: 1.6;
+  font-size: 0.97rem;
+}
+
+.detail-box strong {
+  color: var(--primary-dark);
+  font-weight: 600;
 }
 
 .workflow-container {
@@ -571,11 +673,14 @@ h2 {
   margin-bottom: 0;
 }
 
-// Team page styles
+/**
+ * TEAM PAGE
+ * -----------------------------------------------------------------------------
+ */
 .team-title {
   text-align: center;
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: var(--secondary-color);
 }
 
 .team-intro {
@@ -584,7 +689,7 @@ h2 {
   margin: 0 auto 3rem;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--text-color);
 }
 
 .team-grid {
@@ -595,10 +700,10 @@ h2 {
 }
 
 .team-member {
-  background-color: #f8f9fa;
+  background-color: var(--background-light);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -609,13 +714,13 @@ h2 {
 
 .team-member-header h3 {
   margin: 0;
-  color: #2c3e50;
+  color: var(--secondary-color);
 }
 
 .team-member-role {
   display: block;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-color);
   margin-top: 0.25rem;
 }
 
@@ -644,7 +749,10 @@ h2 {
   text-decoration: underline;
 }
 
-// Partner institutions
+/**
+ * PARTNER INSTITUTIONS
+ * -----------------------------------------------------------------------------
+ */
 .partner-institutions {
   margin-top: 4rem;
   padding-top: 2rem;
@@ -653,7 +761,7 @@ h2 {
 
 .partner-institutions h2 {
   text-align: center;
-  color: #2c3e50;
+  color: var(--secondary-color);
   margin-bottom: 2rem;
 }
 
@@ -664,22 +772,22 @@ h2 {
 }
 
 .institution {
-  background-color: #f8f9fa;
+  background-color: var(--background-light);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .institution h3 {
   margin-top: 0;
-  color: #2c3e50;
+  color: var(--secondary-color);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
 .institution-fullname {
   font-weight: bold;
-  color: #555;
+  color: var(--text-color);
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
@@ -687,7 +795,7 @@ h2 {
 .institution-description {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #666;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -701,7 +809,10 @@ h2 {
   text-decoration: underline;
 }
 
-// Funders page styles
+/**
+ * FUNDERS PAGE
+ * -----------------------------------------------------------------------------
+ */
 .funders-header, .contact-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -721,8 +832,8 @@ h2 {
   margin-bottom: 2.5rem;
   padding: 1.5rem;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background-color: var(--background-light);
+  box-shadow: var(--box-shadow);
 }
 
 .funder-card.primary {
@@ -756,7 +867,7 @@ h2 {
 
 .funder-info h3 {
   margin-top: 0;
-  color: #333;
+  color: var(--secondary-color);
 }
 
 .funder-link {
@@ -779,7 +890,7 @@ h2 {
   background-color: #ffffff;
   border-radius: 6px;
   padding: 1.5rem;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  box-shadow: var(--box-shadow);
 }
 
 .consortium-title {
@@ -798,7 +909,7 @@ h2 {
 }
 
 .pledger-item {
-  background-color: #f9f9f9;
+  background-color: var(--background-light);
   padding: 0.7rem 1rem;
   border-radius: 4px;
   font-size: 0.95rem;
@@ -809,12 +920,12 @@ h2 {
 .pledger-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-  background-color: #f0f7ff;
+  background-color: var(--accent-color);
 }
 
 .coming-soon {
   font-style: italic;
-  color: #666;
+  color: var(--text-color);
 }
 
 .pledgers-grid {
@@ -832,30 +943,15 @@ h2 {
   margin-top: 4rem;
   padding: 2rem;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: var(--background-light);
   border-radius: 8px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color);
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.cta-button:hover {
-  background-color: var(--primary-color);
-  text-decoration: none;
-  color: white;
-}
-
-// Contact page styles
+/**
+ * CONTACT PAGE
+ * -----------------------------------------------------------------------------
+ */
 .contact-main {
   display: none;
 }
@@ -875,7 +971,7 @@ h2 {
 }
 
 .funding-info {
-  background-color: #f9f9f9;
+  background-color: var(--background-light);
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem 0 3rem;
@@ -948,14 +1044,14 @@ h2 {
 
 .contact-card h3 {
   font-size: 1.4rem;
-  color: #444;
+  color: var(--secondary-color);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .contact-description {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
@@ -993,7 +1089,178 @@ h2 {
   transform: translateX(3px);
 }
 
-// Responsive styles
+/**
+ * =============================================================================
+ * FOOTER
+ * =============================================================================
+ */
+
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 1rem;  // Ajustado para coincidir con el estilo original
+  background-color: var(--background-light);
+  margin-top: 60px;
+  font-size: 0.95rem;  // Agregado del estilo en línea
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-branding {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.footer-tagline {
+  color: var(--text-color);
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.footer-heading {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+}
+
+.footer-icon {
+  margin-right: 0.5rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-copyright {
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+// El estilo existente del footer puede ser removido o comentado
+// ya que estos nuevos estilos lo reemplazan
+.footer-content,
+.footer-links,
+.footer-tagline,
+.footer-logo {
+  // Estos estilos ya no se necesitan pero los mantenemos
+  // por si se usan en otro lugar
+}
+
+/**
+ * =============================================================================
+ * UTILITY CLASSES
+ * =============================================================================
+ */
+
+// Flexbox utilities
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+// Text utilities
+.text-center {
+  text-align: center;
+}
+
+// Spacing utilities
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/**
+ * =============================================================================
+ * RESPONSIVE STYLES
+ * =============================================================================
+ */
+
+// Small screens
 @media screen and (max-width: 600px) {
   .footer-content,
   .footer-bottom {
@@ -1016,8 +1283,16 @@ h2 {
     max-width: 100%;
     text-align: center;
   }
+
+  // Footer responsive styles
+  .footer-grid,
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
+// Medium screens
 @media screen and (max-width: 768px) {
   .architecture-details,
   .workflow-step,
@@ -1034,8 +1309,119 @@ h2 {
   .logo-container {
     margin: 0 auto 1.5rem auto;
   }
+
+  // Footer grid goes to single column on smaller screens
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  // Menú móvil
+  .menu-toggle {
+    display: block;
+  }
+  
+  .site-nav {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .site-nav.nav-open {
+    display: block;
+  }
+  
+  /* Transformar hamburguesa en X cuando está activo */
+  .menu-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle.active .hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  // Language switcher responsive
+  .language-switch {
+    justify-content: center;
+  }
+  
+  .lang-link {
+    padding: 0.4rem 0.8rem;
+    margin: 0 0.2rem;
+  }
+
+  // Navigation responsive
+  .navigation-container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .page-link {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+  }
+  
+  .page-link.active::after {
+    display: none;
+  }
+  
+  .page-link.active {
+    background-color: rgba(138, 54, 145, 0.1);
+  }
+  
+  .language-switcher {
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 0.5rem;
+  }
+  
+  .language-divider {
+    display: none;
+  }
+
+  // Ajuste adicional para note-container en móvil
+  .note-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
+  
+  .note-header svg {
+    margin-bottom: 0.5rem;
+  }
 }
 
+// Large screens
 @media screen and (max-width: 800px) {  
   .site-nav {
     float: none;
