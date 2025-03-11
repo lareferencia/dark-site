@@ -9,31 +9,40 @@ categories: post
 published: true
 ---
 
+
 The dARK system architecture is designed with a clear separation of components, organized into the Service Layer and the Core Layer.
 
-<img src="{{ site.baseurl }}/assets/img/architecture.png"/>
+<img src="{{ site.baseurl }}/assets/img/architecture.png" alt="dARK Architecture Diagram" class="img-fluid mb-4" />
 
-### Service Layer
+<h2 class="custom-heading">Service Layer</h2>
 
 The Service Layer provides essential services that interface with the Core Layer components. These services include:
 
-- **dARK Resolver**: Integrated with the global nt2.info resolver system, enabling persistent identifier resolution
-- **dARK Minter**: Used to create and register new PIDs in the system
-- **dARK Dashboard**: Provides monitoring and administrative capabilities for the platform
-- **dARK API**: Facilitates communication between applications and the underlying blockchain
-- **dARK Backup**: Ensures data durability and system reliability
+| Service | Description |
+|---------|-------------|
+| **dARK Resolver** | Integrated with the global nt2.info resolver system, enabling persistent identifier resolution |
+| **dARK Minter** | Used to create and register new PIDs in the system |
+| **dARK Dashboard** | Provides monitoring and administrative capabilities for the platform |
+| **dARK API** | Facilitates communication between applications and the underlying blockchain |
+| **dARK Backup** | Ensures data durability and system reliability |
 
 These services are supported by load balancing mechanisms to ensure high availability and optimal system performance.
 
-### Core Layer (dARK dApp)
+<h2 class="custom-heading">Core Layer (dARK dApp)</h2>
 
 The Core Layer is built on a permissioned blockchain network that forms the backbone of the dARK system. At its heart is a public permissioned network operating on a Proof of Authority (PoA) consensus mechanism, providing both security and efficiency for PID management.
 
+<h3 class="custom-heading-secondary">Blockchain Foundation</h3>
+
 The network leverages <a href="https://besu.hyperledger.org/" target="_blank">Hyperledger Besu</a> technology to provide a secure and efficient blockchain foundation. Hyperledger Besu is an Ethereum client designed for enterprise use that supports both public and private permissioned network deployments. Its implementation of the Ethereum Virtual Machine (EVM) allows for sophisticated smart contracts that manage PID operations with full transparency and auditability.
 
-Designed with resilience and reliability as core principles, the architecture begins with a Minimum Viable dARK Network (MVDN). This network consists of essential blockchain nodes that provide the fundamental functionality required for system operation. These nodes manage RPC/API communications and maintain the distributed ledger of persistent identifiers. Each full node implements API endpoints for external service interaction through load balancing.
+<h3 class="custom-heading-secondary">Network Architecture</h3>
+
+Designed with resilience and reliability as core principles, the architecture begins with a **Minimum Viable dARK Network (MVDN)**. This network consists of essential blockchain nodes that provide the fundamental functionality required for system operation. These nodes manage RPC/API communications and maintain the distributed ledger of persistent identifiers. Each full node implements API endpoints for external service interaction through load balancing.
 
 To guarantee continuous operation even during node failures, the architecture incorporates fault-tolerant redundancy through backup nodes and data replication systems. This distributed approach ensures that no single point of failure can compromise the integrity or availability of the PID infrastructure.
+
+<h3 class="custom-heading-secondary">Application Layer</h3>
 
 At the application layer, the dARK dApp delivers the central functionality for managing persistent identifiers through smart contracts. This application logic handles the creation, updating, and resolution of PIDs while enforcing governance rules defined by the network participants.
 
@@ -75,6 +84,34 @@ At the application layer, the dARK dApp delivers the central functionality for m
     color: #8A3691;
     margin-top: 0;
     margin-bottom: 0.75rem;
+  }
+  
+  .custom-heading {
+    font-size: 1.4rem;
+    color: #8A3691;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #eaeaea;
+  }
+  
+  .custom-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: #8A3691;
+  }
+  
+  .custom-heading-secondary {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
   }
   
   @media (max-width: 768px) {
