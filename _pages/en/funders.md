@@ -59,11 +59,22 @@ order: 2
   <div class="pledgers-group">
     <h4 class="consortium-title">Canadian Research Knowledge Network</h4>
     <div class="pledgers-list">
-      <div class="pledger-item">University of Toronto</div>
       <div class="pledger-item">Kwantlen Polytechnic University</div>
       <div class="pledger-item">Simon Fraser University</div>
       <div class="pledger-item">University of Alberta</div>
       <div class="pledger-item">University of Saskatchewan</div>
+      <div class="pledger-item">University of Toronto</div>
+    </div>
+  </div>
+  
+  <div class="pledgers-group">
+    <h4 class="consortium-title">Centre National de la Recherche Scientifique (CNRS)</h4>
+  </div>
+  
+  <div class="pledgers-group">
+    <h4 class="consortium-title">Consortium Couperin</h4>
+    <div class="pledgers-list">
+      <div class="pledger-item">Université Paris Nanterre</div>
     </div>
   </div>
   
@@ -75,19 +86,11 @@ order: 2
   </div>
   
   <div class="pledgers-group">
-    <h4 class="consortium-title">Consortium Couperin</h4>
-    <div class="pledgers-list">
-      <div class="pledger-item">Université Paris Nanterre</div>
-    </div>
+    <h4 class="consortium-title">Macalester College</h4>
   </div>
   
   <div class="pledgers-group">
-    <h4 class="consortium-title">Other Institutions</h4>
-    <div class="pledgers-list">
-      <div class="pledger-item">Macalester College</div>
-      <div class="pledger-item">Massachusetts Institute of Technology (MIT)</div>
-      <div class="pledger-item">Centre National de la Recherche Scientifique (CNRS)</div>
-    </div>
+    <h4 class="consortium-title">Massachusetts Institute of Technology (MIT)</h4>
   </div>
 </div>
 
