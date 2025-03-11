@@ -55,17 +55,40 @@ order: 2
 
 <div class="pledgers-section">
   <h3>Organizations that have supported dARK through SCOSS</h3>
-  <p class="coming-soon">Complete pledgers list coming soon</p>
   
-  <!-- Cuando tengas la lista, reemplaza esto con una grid de logos o lista como esta:
-  <div class="pledgers-grid">
-    {% for pledger in site.data.pledgers %}
-      <div class="logo-container pledger-logo-container">
-        <img src="{{ site.baseurl }}/assets/img/pledgers/{{ pledger.logo }}" alt="{{ pledger.name }} Logo" class="pledger-logo">
-      </div>
-    {% endfor %}
+  <div class="pledgers-group">
+    <h4 class="consortium-title">Canadian Research Knowledge Network</h4>
+    <div class="pledgers-list">
+      <div class="pledger-item">University of Toronto</div>
+      <div class="pledger-item">Kwantlen Polytechnic University</div>
+      <div class="pledger-item">Simon Fraser University</div>
+      <div class="pledger-item">University of Alberta</div>
+      <div class="pledger-item">University of Saskatchewan</div>
+    </div>
   </div>
-  -->
+  
+  <div class="pledgers-group">
+    <h4 class="consortium-title">Council of Australian University Librarians</h4>
+    <div class="pledgers-list">
+      <div class="pledger-item">University of New South Wales</div>
+    </div>
+  </div>
+  
+  <div class="pledgers-group">
+    <h4 class="consortium-title">Consortium Couperin</h4>
+    <div class="pledgers-list">
+      <div class="pledger-item">Université Paris Nanterre</div>
+    </div>
+  </div>
+  
+  <div class="pledgers-group">
+    <h4 class="consortium-title">Other Institutions</h4>
+    <div class="pledgers-list">
+      <div class="pledger-item">Macalester College</div>
+      <div class="pledger-item">Massachusetts Institute of Technology (MIT)</div>
+      <div class="pledger-item">Centre National de la Recherche Scientifique (CNRS)</div>
+    </div>
+  </div>
 </div>
 
 <div class="support-cta">
@@ -144,7 +167,45 @@ order: 2
     padding: 2rem;
     background-color: #f5f5f5;
     border-radius: 8px;
-    text-align: center;
+  }
+  
+  .pledgers-group {
+    margin-bottom: 2rem;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  }
+  
+  .consortium-title {
+    margin-top: 0;
+    color: #8A3691;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pledgers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .pledger-item {
+    background-color: #f9f9f9;
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .pledger-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    background-color: #f0f7ff;
   }
   
   .coming-soon {
