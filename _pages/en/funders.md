@@ -26,10 +26,7 @@ order: 2
     <a href="https://www.gov.br/ibict/pt-br" class="funder-link" target="_blank">Visit website →</a>
   </div>
 </div>
-
-## Supporting Organizations
-
-<div class="funder-card">
+<div class="funder-card primary">
   <div class="logo-container">
     <img src="{{ site.baseurl }}/assets/img/lareferencia-logo.png" alt="LA Referencia Logo" class="funder-logo">
   </div>
@@ -39,6 +36,8 @@ order: 2
     <a href="http://www.lareferencia.info/en/" class="funder-link" target="_blank">Visit website →</a>
   </div>
 </div>
+
+## Supporting Organizations
 
 <div class="funder-card">
   <div class="logo-container">
