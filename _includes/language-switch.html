@@ -1,46 +1,15 @@
 <div class="language-switch">
-  {% if page.language_reference %}
-    {% assign other_languages = site.pages | where: "language_reference", page.language_reference %}
-  {% endif %}
+  {% assign current_path = page.url | remove_first: "/en/" | remove_first: "/es/" | remove_first: "/pt/" %}
+  {% if current_path == "" %}{% assign current_path = "home" %}{% endif %}
   
-  {% if page.language == "en" %}
-    <a class="lang-link active" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">EN</a>
-  {% else %}
-    {% for other_page in other_languages %}
-      {% if other_page.language == "en" %}
-        <a class="lang-link" href="{{ site.url }}{{ site.baseurl }}{{ other_page.url }}">EN</a>
-      {% endif %}
-    {% endfor %}
-    {% if other_languages | where: "language", "en" | size == 0 %}
-      <span class="lang-link disabled">EN</span>
-    {% endif %}
-  {% endif %}
-  
-  {% if page.language == "es" %}
-    <a class="lang-link active" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">ES</a>
-  {% else %}
-    {% for other_page in other_languages %}
-      {% if other_page.language == "es" %}
-        <a class="lang-link" href="{{ site.url }}{{ site.baseurl }}{{ other_page.url }}">ES</a>
-      {% endif %}
-    {% endfor %}
-    {% if other_languages | where: "language", "es" | size == 0 %}
-      <span class="lang-link disabled">ES</span>
-    {% endif %}
-  {% endif %}
-  
-  {% if page.language == "pt" %}
-    <a class="lang-link active" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">PT</a>
-  {% else %}
-    {% for other_page in other_languages %}
-      {% if other_page.language == "pt" %}
-        <a class="lang-link" href="{{ site.url }}{{ site.baseurl }}{{ other_page.url }}">PT</a>
-      {% endif %}
-    {% endfor %}
-    {% if other_languages | where: "language", "pt" | size == 0 %}
-      <span class="lang-link disabled">PT</span>
-    {% endif %}
-  {% endif %}
+  <a class="lang-link {% if page.language == 'en' %}active{% endif %}" 
+     href="{{ '/en/' | append: current_path | relative_url }}">EN</a>
+     
+  <a class="lang-link {% if page.language == 'es' %}active{% endif %}" 
+     href="{{ '/es/' | append: current_path | relative_url }}">ES</a>
+     
+  <a class="lang-link {% if page.language == 'pt' %}active{% endif %}" 
+     href="{{ '/pt/' | append: current_path | relative_url }}">PT</a>
 </div>
 
 <style>
