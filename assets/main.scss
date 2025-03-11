@@ -402,6 +402,598 @@ h2 {
   opacity: 0.8;
 }
 
+// Section headers and titles
+.custom-heading {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.custom-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.custom-heading-secondary {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+// Note containers
+.note-container {
+  margin: 2.5rem 0;
+  background-color: #f8f9fe;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(138, 54, 145, 0.08);
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+.note-header {
+  background-color: rgba(138, 54, 145, 0.07);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(138, 54, 145, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.note-header h4 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.note-content {
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.note-container ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.note-container li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.note-container li::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.note-container p:last-child {
+  margin-bottom: 0;
+}
+
+.note-container p {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+// Architecture page styles
+.architecture-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.detail-box {
+  flex: 1;
+  min-width: 250px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.detail-box h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.workflow-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.workflow-step {
+  display: flex;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-left: 3px solid var(--primary-color);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.step-content p {
+  margin-bottom: 0;
+}
+
+// Team page styles
+.team-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.team-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.team-member {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.team-member-role {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.team-member-org {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin: 0.8rem 0;
+}
+
+.team-member-contact {
+  margin-top: 0.8rem;
+}
+
+.team-email {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.team-email:hover {
+  text-decoration: underline;
+}
+
+// Partner institutions
+.partner-institutions {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eaeaea;
+}
+
+.partner-institutions h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.institutions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.institution {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.institution h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.institution-fullname {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.institution-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.institution-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.institution-link:hover {
+  text-decoration: underline;
+}
+
+// Funders page styles
+.funders-header, .contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.funder-card {
+  display: flex;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.funder-card.primary {
+  background-color: #f0f7ff;
+  border-left: 5px solid var(--primary-color);
+}
+
+.logo-container {
+  width: 180px;
+  height: 90px;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.funder-logo {
+  max-width: 95%;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.funder-info {
+  flex: 1;
+}
+
+.funder-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.funder-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.pledgers-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.pledgers-group {
+  margin-bottom: 2rem;
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.consortium-title {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pledgers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pledger-item {
+  background-color: #f9f9f9;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pledger-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  background-color: #f0f7ff;
+}
+
+.coming-soon {
+  font-style: italic;
+  color: #666;
+}
+
+.pledgers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pledger-logo-container {
+  margin: 0 auto;
+}
+
+.support-cta {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-color);
+  text-decoration: none;
+  color: white;
+}
+
+// Contact page styles
+.contact-main {
+  display: none;
+}
+
+.contact-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.funding-info {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0 3rem;
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: 2rem auto 3rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(138, 54, 145, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(138, 54, 145, 0.18);
+}
+
+.contact-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f0f7ff 0%, #f9f0ff 100%);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.contact-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.contact-icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-color: rgba(138, 54, 145, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  border: 2px solid rgba(138, 54, 145, 0.2);
+  box-shadow: 0 4px 12px rgba(138, 54, 145, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.envelope-icon {
+  width: 40px;
+  height: 40px;
+  stroke: var(--primary-color);
+  stroke-width: 1.5px;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .envelope-icon {
+  transform: scale(1.12);
+}
+
+.fas.fa-envelope {
+  display: none;
+}
+
+.contact-card h3 {
+  font-size: 1.4rem;
+  color: #444;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.contact-email-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.05rem;
+  box-shadow: 0 3px 10px rgba(138, 54, 145, 0.1);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid rgba(138, 54, 145, 0.2);
+}
+
+.contact-email-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(138, 54, 145, 0.25);
+  text-decoration: none;
+}
+
+.contact-email-link i {
+  margin-left: 0.8rem;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-email-link:hover i {
+  transform: translateX(3px);
+}
+
+// Responsive styles
 @media screen and (max-width: 600px) {
   .footer-content,
   .footer-bottom {
@@ -426,7 +1018,24 @@ h2 {
   }
 }
 
-// Responsive
+@media screen and (max-width: 768px) {
+  .architecture-details,
+  .workflow-step,
+  .team-grid, 
+  .institutions-container,
+  .funder-card {
+    flex-direction: column;
+  }
+  
+  .step-number {
+    margin-bottom: 1rem;
+  }
+  
+  .logo-container {
+    margin: 0 auto 1.5rem auto;
+  }
+}
+
 @media screen and (max-width: 800px) {  
   .site-nav {
     float: none;
