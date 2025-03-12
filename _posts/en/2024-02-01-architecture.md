@@ -58,6 +58,14 @@ The Service Layer provides essential services that interface with the Core Layer
       <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
     </div>
   </div>
+
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK LA Referencia</a></h4>
+    <p>Implements bulk dARK minting on LA Referencia Harvester Plasform</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
 </div>
 
 These services are supported by load balancing mechanisms to ensure high availability and optimal system performance.

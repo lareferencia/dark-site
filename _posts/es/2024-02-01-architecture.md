@@ -18,19 +18,69 @@ The dARK system architecture is designed with a clear separation of components, 
 
 The Service Layer provides essential services that interface with the Core Layer components. These services include:
 
-| Service | Description |
-|---------|-------------|
-| **dARK Resolver** | Integrated with the global nt2.info resolver system, enabling persistent identifier resolution |
-| **dARK Minter** | Used to create and register new PIDs in the system |
-| **dARK Dashboard** | Provides monitoring and administrative capabilities for the platform |
-| **dARK API** | Facilitates communication between applications and the underlying blockchain |
-| **dARK Backup** | Ensures data durability and system reliability |
+<div class="service-components">
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">dARK Resolver</a></h4>
+    <p>Integrated with the global nt2.info resolver system, enabling persistent identifier resolution</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">dARK Minter</a></h4>
+    <p>Used to create and register new PIDs in the system</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">dARK Dashboard</a></h4>
+    <p>Provides monitoring and administrative capabilities for the platform</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">dARK API</a></h4>
+    <p>Facilitates communication between applications and the underlying blockchain</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK Backup</a></h4>
+    <p>Ensures data durability and system reliability</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK LA Referencia</a></h4>
+    <p>Implements bulk dARK minting on LA Referencia Harvester Plasform</p>
+    <div class="code-access">
+      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+    </div>
+  </div>
+</div>
 
 These services are supported by load balancing mechanisms to ensure high availability and optimal system performance.
 
 <h2 class="custom-heading">Core Layer (dARK dApp)</h2>
 
 The Core Layer is built on a permissioned blockchain network that forms the backbone of the dARK system. At its heart is a public permissioned network operating on a Proof of Authority (PoA) consensus mechanism, providing both security and efficiency for PID management.
+
+<div class="service-item core-app">
+  <h4><a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">dARK dApp</a></h4>
+  <p>Core decentralized application that implements the PID management smart contracts and ensures data integrity through blockchain technology</p>
+  <div class="code-access">
+    <a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">Access source code on GitHub</a>
+  </div>
+</div>
 
 <h3 class="custom-heading-secondary">Blockchain Foundation</h3>
 
@@ -130,191 +180,6 @@ This integration approach enables metadata aggregators like LA Referencia to enh
     <p>These enhancements will further strengthen the dARK ecosystem and expand its utility within the scholarly communication landscape across Latin America and beyond.</p>
   </div>
 </div>
-
-<style>
-  .architecture-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .detail-box {
-    flex: 1;
-    min-width: 250px;
-    padding: 1.5rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  .detail-box h4 {
-    color: #8A3691;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-  }
-  
-  .custom-heading {
-    font-size: 1.4rem;
-    color: #8A3691;
-    position: relative;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    font-weight: 600;
-    border-bottom: 2px solid #eaeaea;
-  }
-  
-  .custom-heading::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background-color: #8A3691;
-  }
-  
-  .custom-heading-secondary {
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  
-  @media (max-width: 768px) {
-    .architecture-details {
-      flex-direction: column;
-    }
-  }
-  
-  .workflow-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin: 2rem 0;
-  }
-  
-  .workflow-step {
-    display: flex;
-    gap: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border-left: 3px solid #8A3691;
-  }
-  
-  .step-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #8A3691;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-  }
-  
-  .step-content {
-    flex: 1;
-  }
-  
-  .step-content h4 {
-    color: #8A3691;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-  }
-  
-  .step-content p {
-    margin-bottom: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .workflow-step {
-      flex-direction: column;
-    }
-    
-    .step-number {
-      margin-bottom: 1rem;
-    }
-  }
-  
-  /* Note container styling */
-  .note-container {
-    margin: 2.5rem 0;
-    background-color: #f8f9fe;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(138, 54, 145, 0.08);
-    overflow: hidden;
-    width: 100%;
-    display: block;
-  }
-  
-  .note-header {
-    background-color: rgba(138, 54, 145, 0.07);
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    border-bottom: 1px solid rgba(138, 54, 145, 0.1);
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .note-header h4 {
-    color: #8A3691;
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    flex-grow: 1;
-  }
-  
-  .note-content {
-    padding: 1.25rem 1.5rem;
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-  }
-  
-  .note-container ul {
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .note-container li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .note-container li::before {
-    content: "";
-    position: absolute;
-    left: -1rem;
-    top: 0.55rem;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #8A3691;
-  }
-  
-  .note-container p:last-child {
-    margin-bottom: 0;
-  }
-  
-  .note-container p {
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-  }
-</style>
 
 
 
