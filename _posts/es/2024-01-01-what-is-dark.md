@@ -1,89 +1,89 @@
 ---
 layout: post
-title:  "What is dARK"  
+title:  "¿Qué es dARK?"  
 date:   2024-01-01 00:00:00 +0200  
-description:  "What is dARK"  
-language: es
+description:  "¿Qué es dARK?"  
+language: es  
 language_reference: what-is-dark
 categories: post
 published: true
 ---
 
 <p class="lead-highlight">
-  <strong>dARK</strong> is a decentralized implementation of <a href="https://arks.org" target="_blank">Archival Resource Key (ARK)</a> that assigns and resolves ARK identifiers through institutional blockchain nodes. It operates on a <strong>"public good"</strong> network where <strong>data ownership, storage, and control</strong> are distributed among all participating organizations.
+  <strong>dARK</strong> es una implementación descentralizada de <a href="https://arks.org" target="_blank">Archival Resource Key (ARK)</a> que asigna y resuelve identificadores ARK a través de nodos blockchain institucionales. Opera en una red de <strong>"bien público"</strong> donde <strong>la propiedad, el almacenamiento y el control de los datos</strong> se distribuyen entre todas las organizaciones participantes.
 </p>
 
-The initial project was primarily hosted and funded by the Brazilian Institute of Information in Science and Technology (IBICT), with additional support from LA Referencia, made possible thanks to the backing of the Global Sustainability Coalition for Open Science Services (SCOSS) pledges.
+El proyecto inicial fue principalmente alojado y financiado por el Instituto Brasileño de Información en Ciencia y Tecnología (IBICT), con apoyo adicional de LA Referencia, hecho posible gracias al respaldo de los compromisos de la Coalición Global de Sostenibilidad para Servicios de Ciencia Abierta (SCOSS).
 
 <div class="architecture-details">
   <div class="detail-box">
-    <h4>Decentralization</h4>
-    <p>An <strong>initial implementation of decentralized ARK</strong> based on a lightweight private blockchain network</p>
+    <h4>Descentralización</h4>
+    <p>Una <strong>implementación inicial de ARK descentralizado</strong> basada en una red blockchain privada liviana</p>
   </div>
   
   <div class="detail-box">
-    <h4>Fault Tolerance</h4>
-    <p><strong>Fault-tolerant decentralized attribution and resolution of ARK identifiers</strong> through a distributed network</p>
+    <h4>Tolerancia a Fallos</h4>
+    <p><strong>Atribución y resolución descentralizada tolerante a fallos de identificadores ARK</strong> a través de una red distribuida</p>
   </div>
   
   <div class="detail-box">
-    <h4>Integration</h4>
-    <p><strong>An aggregator-level ARK attribution system</strong> for legacy research production in the Brazilian open science ecosystem (OasisBr, IBICT Brazil)</p>
+    <h4>Integración</h4>
+    <p><strong>Un sistema de atribución ARK a nivel de agregador</strong> para la producción de investigación heredada en el ecosistema de ciencia abierta brasileño (OasisBr, IBICT Brasil)</p>
   </div>
 </div>
 
-<h2 class="custom-heading">Motivations</h2>
+<h2 class="custom-heading">Motivaciones</h2>
 
 <div class="workflow-container">
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>ARK Persistent Identifier</h4>
-      <p>The ARK identifier has emerged as a <strong>viable, low-cost alternative solution</strong> thanks to the potential implementation of local providers for the global resolver.</p>
+      <h4>Identificador Persistente ARK</h4>
+      <p>El identificador ARK ha surgido como una <strong>alternativa viable y de bajo costo</strong> debido a la posibilidad de implementar proveedores locales para el resolvedor global. Su uso facilita el <strong>acceso y preservación a largo plazo</strong> de recursos digitales, asegurando enlaces estables y confiables.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Research Assessment</h4>
-      <p><strong>Need for persistent identifiers</strong> to build more robust research graphs, indicators, and research assessment inputs.</p>
+      <h4>Evaluación de la Investigación</h4>
+      <p><strong>Los identificadores persistentes son esenciales</strong> para construir gráficos de investigación más robustos, generar indicadores precisos y mejorar la evaluación de la producción científica. Su capacidad para vincular diversos objetos de información mejora el análisis y la comprensión del impacto de la investigación.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Global South Challenges</h4>
-      <p><strong>Lack of persistent identifier coverage</strong> in Global South repositories, primarily due to the costs associated with these services for institutions.</p>
+      <h4>Desafíos en el Sur Global</h4>
+      <p>En los países del Sur Global, la <strong>falta de cobertura de identificadores persistentes</strong> es un problema común. Esto se debe principalmente a los costos asociados con estos servicios, limitando el acceso a infraestructuras esenciales para asegurar la visibilidad y preservación de los resultados de investigación.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Decentralization Need</h4>
-      <p>Most persistent identifier systems are <strong>based on centralized models</strong>, relying on a few agencies that support the service infrastructure.</p>
+      <h4>Necesidad de Descentralización</h4>
+      <p>Actualmente, la mayoría de los sistemas de identificadores persistentes operan bajo <strong>modelos centralizados</strong>, dependiendo de unas pocas agencias para mantener la infraestructura de servicios. Un enfoque descentralizado, como el propuesto por dARK, reduce esta dependencia y aumenta la resiliencia del sistema, promoviendo mayor equidad en el acceso y gestión de identificadores.</p>
     </div>
   </div>
 </div>
 
-<h2 class="custom-heading">Long-term Objectives</h2>
+<h2 class="custom-heading">Objetivos a Largo Plazo</h2>
 
 <div class="architecture-details">
   <div class="detail-box">
-    <h4>Open Infrastructure</h4>
-    <p>Providing an <strong>open and non-centralized system for unique/deduplicated persistent identifiers</strong> accessible to all</p>
+    <h4>Infraestructura Abierta</h4>
+    <p>Proporcionar un <strong>sistema abierto y no centralizado para identificadores persistentes únicos/deduplicados</strong> accesible para todos</p>
   </div>
   
   <div class="detail-box">
-    <h4>Resolution Services</h4>
-    <p>Offering a <strong>decentralized resolution service</strong> for the Open Science ecosystem, interoperable with other PID services (such as DOI agencies)</p>
+    <h4>Servicios de Resolución</h4>
+    <p>Ofrecer un <strong>servicio de resolución descentralizado</strong> para el ecosistema de Ciencia Abierta, interoperable con otros servicios PID (como agencias DOI)</p>
   </div>
   
   <div class="detail-box">
-    <h4>Metadata Preservation</h4>
-    <p>Ensuring the <strong>decentralized preservation</strong> of metadata associated with digital objects referenced by ARK identifiers, aiming to provide <strong>consistent PIDs and metadata</strong> to research graphs (OpenAIRE, OpenAlex, among others)</p>
+    <h4>Preservación de Metadatos</h4>
+    <p>Asegurar la <strong>preservación descentralizada</strong> de metadatos asociados con objetos digitales referenciados por identificadores ARK, con el objetivo de proporcionar <strong>PIDs y metadatos consistentes</strong> a gráficos de investigación (OpenAIRE, OpenAlex, entre otros)</p>
   </div>
 </div>
 
@@ -94,10 +94,10 @@ The initial project was primarily hosted and funded by the Brazilian Institute o
       <line x1="12" y1="8" x2="12" y2="12"></line>
       <line x1="12" y1="16" x2="12.01" y2="16"></line>
     </svg>
-    <h4>Important Note</h4>
+    <h4>Nota Importante</h4>
   </div>
   <div class="note-content">
-    <p>This development is not intended to replace or compete with DOI identifiers/agencies, but to serve as a complementary solution that will also be interoperable with DOI providers.</p>
+    <p>Este desarrollo no pretende reemplazar o competir con los identificadores/agencias DOI, sino servir como una solución complementaria que también será interoperable con proveedores DOI.</p>
   </div>
 </div>
 

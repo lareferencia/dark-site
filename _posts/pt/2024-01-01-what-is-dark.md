@@ -1,89 +1,89 @@
 ---
 layout: post
-title:  "What is dARK"  
+title:  "O que é dARK"  
 date:   2024-01-01 00:00:00 +0200  
-description:  "What is dARK"  
-language: pt
+description:  "O que é dARK"  
+language: pt  
 language_reference: what-is-dark
 categories: post
 published: true
 ---
 
 <p class="lead-highlight">
-  <strong>dARK</strong> is a decentralized implementation of <a href="https://arks.org" target="_blank">Archival Resource Key (ARK)</a> that assigns and resolves ARK identifiers through institutional blockchain nodes. It operates on a <strong>"public good"</strong> network where <strong>data ownership, storage, and control</strong> are distributed among all participating organizations.
+  <strong>dARK</strong> é uma implementação descentralizada do <a href="https://arks.org" target="_blank">Archival Resource Key (ARK)</a> que atribui e resolve identificadores ARK através de nós blockchain institucionais. Opera em uma rede de <strong>"bem público"</strong> onde a <strong>propriedade, armazenamento e controle dos dados</strong> são distribuídos entre todas as organizações participantes.
 </p>
 
-The initial project was primarily hosted and funded by the Brazilian Institute of Information in Science and Technology (IBICT), with additional support from LA Referencia, made possible thanks to the backing of the Global Sustainability Coalition for Open Science Services (SCOSS) pledges.
+O projeto inicial foi principalmente hospedado e financiado pelo Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT), com apoio adicional da LA Referencia, possibilitado graças ao suporte das contribuições da Global Sustainability Coalition for Open Science Services (SCOSS).
 
 <div class="architecture-details">
   <div class="detail-box">
-    <h4>Decentralization</h4>
-    <p>An <strong>initial implementation of decentralized ARK</strong> based on a lightweight private blockchain network</p>
+    <h4>Descentralização</h4>
+    <p>Uma <strong>implementação inicial do ARK descentralizado</strong> baseada em uma rede blockchain privada leve</p>
   </div>
   
   <div class="detail-box">
-    <h4>Fault Tolerance</h4>
-    <p><strong>Fault-tolerant decentralized attribution and resolution of ARK identifiers</strong> through a distributed network</p>
+    <h4>Tolerância a Falhas</h4>
+    <p><strong>Atribuição e resolução descentralizada tolerante a falhas de identificadores ARK</strong> através de uma rede distribuída</p>
   </div>
   
   <div class="detail-box">
-    <h4>Integration</h4>
-    <p><strong>An aggregator-level ARK attribution system</strong> for legacy research production in the Brazilian open science ecosystem (OasisBr, IBICT Brazil)</p>
+    <h4>Integração</h4>
+    <p><strong>Um sistema de atribuição ARK em nível de agregador</strong> para produção de pesquisa legada no ecossistema brasileiro de ciência aberta (OasisBr, IBICT Brasil)</p>
   </div>
 </div>
 
-<h2 class="custom-heading">Motivations</h2>
+<h2 class="custom-heading">Motivações</h2>
 
 <div class="workflow-container">
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>ARK Persistent Identifier</h4>
-      <p>The ARK identifier has emerged as a <strong>viable, low-cost alternative solution</strong> thanks to the potential implementation of local providers for the global resolver.</p>
+      <h4>Identificador Persistente ARK</h4>
+      <p>O identificador ARK surgiu como uma <strong>alternativa viável e de baixo custo</strong> devido à possibilidade de implementar provedores locais para o resolvedor global. Seu uso facilita o <strong>acesso e preservação de longo prazo</strong> de recursos digitais, garantindo links estáveis e confiáveis.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Research Assessment</h4>
-      <p><strong>Need for persistent identifiers</strong> to build more robust research graphs, indicators, and research assessment inputs.</p>
+      <h4>Avaliação de Pesquisa</h4>
+      <p><strong>Identificadores persistentes são essenciais</strong> para construir grafos de pesquisa mais robustos, gerar indicadores precisos e melhorar a avaliação da produção científica. Sua capacidade de vincular vários objetos de informação aprimora a análise e compreensão do impacto da pesquisa.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Global South Challenges</h4>
-      <p><strong>Lack of persistent identifier coverage</strong> in Global South repositories, primarily due to the costs associated with these services for institutions.</p>
+      <h4>Desafios no Sul Global</h4>
+      <p>Nos países do Sul Global, a <strong>falta de cobertura de identificadores persistentes</strong> é um problema comum. Isso se deve principalmente aos custos associados a esses serviços, limitando o acesso a infraestruturas essenciais para garantir a visibilidade e preservação dos resultados de pesquisa.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Decentralization Need</h4>
-      <p>Most persistent identifier systems are <strong>based on centralized models</strong>, relying on a few agencies that support the service infrastructure.</p>
+      <h4>Necessidade de Descentralização</h4>
+      <p>Atualmente, a maioria dos sistemas de identificadores persistentes opera sob <strong>modelos centralizados</strong>, dependendo de algumas agências para manter a infraestrutura de serviço. Uma abordagem descentralizada, como a proposta pelo dARK, reduz essa dependência e aumenta a resiliência do sistema, promovendo maior equidade no acesso e gestão dos identificadores.</p>
     </div>
   </div>
 </div>
 
-<h2 class="custom-heading">Long-term Objectives</h2>
+<h2 class="custom-heading">Objetivos de Longo Prazo</h2>
 
 <div class="architecture-details">
   <div class="detail-box">
-    <h4>Open Infrastructure</h4>
-    <p>Providing an <strong>open and non-centralized system for unique/deduplicated persistent identifiers</strong> accessible to all</p>
+    <h4>Infraestrutura Aberta</h4>
+    <p>Fornecer um <strong>sistema aberto e não centralizado para identificadores persistentes únicos/desduplicados</strong> acessível a todos</p>
   </div>
   
   <div class="detail-box">
-    <h4>Resolution Services</h4>
-    <p>Offering a <strong>decentralized resolution service</strong> for the Open Science ecosystem, interoperable with other PID services (such as DOI agencies)</p>
+    <h4>Serviços de Resolução</h4>
+    <p>Oferecer um <strong>serviço de resolução descentralizado</strong> para o ecossistema de Ciência Aberta, interoperável com outros serviços de PID (como agências DOI)</p>
   </div>
   
   <div class="detail-box">
-    <h4>Metadata Preservation</h4>
-    <p>Ensuring the <strong>decentralized preservation</strong> of metadata associated with digital objects referenced by ARK identifiers, aiming to provide <strong>consistent PIDs and metadata</strong> to research graphs (OpenAIRE, OpenAlex, among others)</p>
+    <h4>Preservação de Metadados</h4>
+    <p>Garantir a <strong>preservação descentralizada</strong> dos metadados associados aos objetos digitais referenciados pelos identificadores ARK, visando fornecer <strong>PIDs e metadados consistentes</strong> para grafos de pesquisa (OpenAIRE, OpenAlex, entre outros)</p>
   </div>
 </div>
 
@@ -94,10 +94,10 @@ The initial project was primarily hosted and funded by the Brazilian Institute o
       <line x1="12" y1="8" x2="12" y2="12"></line>
       <line x1="12" y1="16" x2="12.01" y2="16"></line>
     </svg>
-    <h4>Important Note</h4>
+    <h4>Nota Importante</h4>
   </div>
   <div class="note-content">
-    <p>This development is not intended to replace or compete with DOI identifiers/agencies, but to serve as a complementary solution that will also be interoperable with DOI providers.</p>
+    <p>Este desenvolvimento não pretende substituir ou competir com identificadores/agências DOI, mas servir como uma solução complementar que também será interoperável com provedores DOI.</p>
   </div>
 </div>
 

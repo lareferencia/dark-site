@@ -1,165 +1,165 @@
 ---
 layout: post
-title:  "Architecture and Components"  
+title:  "Arquitetura e Componentes"  
 date:   2024-02-01 00:00:00 +0200  
-description:  "Architecture and Components"  
-language: pt
+description:  "Arquitetura e Componentes"  
+language: pt  
 language_reference: architecture
 categories: post
 published: true
 ---
 
 
-The dARK system architecture is designed with a clear separation of components, organized into the Service Layer and the Core Layer.
+A arquitetura do sistema dARK é projetada com uma clara separação de componentes, organizados em Camada de Serviço e Camada Central.
 
-<img src="{{ site.baseurl }}/assets/img/architecture.png" alt="dARK Architecture Diagram" class="img-fluid mb-4" />
+<img src="{{ site.baseurl }}/assets/img/architecture.png" alt="Diagrama de Arquitetura dARK" class="img-fluid mb-4" />
 
-<h2 class="custom-heading">Service Layer</h2>
+<h2 class="custom-heading">Camada de Serviço</h2>
 
-The Service Layer provides essential services that interface with the Core Layer components. These services include:
+A Camada de Serviço fornece serviços essenciais que interagem com os componentes da Camada Central. Esses serviços incluem:
 
 <div class="service-components">
   <div class="service-item">
     <h4><a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">dARK Resolver</a></h4>
-    <p>Integrated with the global nt2.info resolver system, enabling persistent identifier resolution</p>
+    <p>Integrado com o sistema global de resolução nt2.info, permitindo a resolução de identificadores persistentes</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">Acesse o código-fonte no GitHub</a>
     </div>
   </div>
   
   <div class="service-item">
     <h4><a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">dARK Minter</a></h4>
-    <p>Used to create and register new PIDs in the system</p>
+    <p>Usado para criar e registrar novos PIDs no sistema</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">Acesse o código-fonte no GitHub</a>
     </div>
   </div>
   
   <div class="service-item">
     <h4><a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">dARK Dashboard</a></h4>
-    <p>Provides monitoring and administrative capabilities for the platform</p>
+    <p>Fornece recursos de monitoramento e administração para a plataforma</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">Acesse o código-fonte no GitHub</a>
     </div>
   </div>
   
   <div class="service-item">
     <h4><a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">dARK API</a></h4>
-    <p>Facilitates communication between applications and the underlying blockchain</p>
+    <p>Facilita a comunicação entre aplicações e o blockchain subjacente</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">Acesse o código-fonte no GitHub</a>
     </div>
   </div>
   
   <div class="service-item">
     <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK Backup</a></h4>
-    <p>Ensures data durability and system reliability</p>
+    <p>Garante a durabilidade dos dados e a confiabilidade do sistema</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Acesse o código-fonte no GitHub</a>
     </div>
   </div>
 
   <div class="service-item">
     <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK LA Referencia</a></h4>
-    <p>Implements bulk dARK minting on LA Referencia Harvester Plasform</p>
+    <p>Implementa a criação em massa de dARK na Plataforma Coletora LA Referencia</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Acesse o código-fonte no GitHub</a>
     </div>
   </div>
 </div>
 
-These services are supported by load balancing mechanisms to ensure high availability and optimal system performance.
+Esses serviços são suportados por mecanismos de balanceamento de carga para garantir alta disponibilidade e desempenho ótimo do sistema.
 
-<h2 class="custom-heading">Core Layer (dARK dApp)</h2>
+<h2 class="custom-heading">Camada Central (dARK dApp)</h2>
 
-The Core Layer is built on a permissioned blockchain network that forms the backbone of the dARK system. At its heart is a public permissioned network operating on a Proof of Authority (PoA) consensus mechanism, providing both security and efficiency for PID management.
+A Camada Central é construída sobre uma rede blockchain permissionada que forma a espinha dorsal do sistema dARK. Em seu núcleo está uma rede pública permissionada operando com um mecanismo de consenso de Prova de Autoridade (PoA), fornecendo segurança e eficiência para o gerenciamento de PIDs.
 
 <div class="service-item core-app">
   <h4><a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">dARK dApp</a></h4>
-  <p>Core decentralized application that implements the PID management smart contracts and ensures data integrity through blockchain technology</p>
+  <p>Aplicação descentralizada central que implementa os contratos inteligentes de gerenciamento de PID e garante a integridade dos dados através da tecnologia blockchain</p>
   <div class="code-access">
-    <a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">Access source code on GitHub</a>
+    <a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">Acesse o código-fonte no GitHub</a>
   </div>
 </div>
 
-<h3 class="custom-heading-secondary">Blockchain Foundation</h3>
+<h3 class="custom-heading-secondary">Fundação Blockchain</h3>
 
-The network leverages <a href="https://besu.hyperledger.org/" target="_blank">Hyperledger Besu</a> technology to provide a secure and efficient blockchain foundation. Hyperledger Besu is an Ethereum client designed for enterprise use that supports both public and private permissioned network deployments. Its implementation of the Ethereum Virtual Machine (EVM) allows for sophisticated smart contracts that manage PID operations with full transparency and auditability.
+A rede utiliza a tecnologia <a href="https://besu.hyperledger.org/" target="_blank">Hyperledger Besu</a> para fornecer uma base blockchain segura e eficiente. O Hyperledger Besu é um cliente Ethereum projetado para uso empresarial que suporta implantações de rede permissionada tanto públicas quanto privadas. Sua implementação da Máquina Virtual Ethereum (EVM) permite contratos inteligentes sofisticados que gerenciam operações de PID com total transparência e auditabilidade.
 
-<h3 class="custom-heading-secondary">Network Architecture</h3>
+<h3 class="custom-heading-secondary">Arquitetura de Rede</h3>
 
-Designed with resilience and reliability as core principles, the architecture begins with a **Minimum Viable dARK Network (MVDN)**. This network consists of essential blockchain nodes that provide the fundamental functionality required for system operation. These nodes manage RPC/API communications and maintain the distributed ledger of persistent identifiers. Each full node implements API endpoints for external service interaction through load balancing.
+Projetada com resiliência e confiabilidade como princípios fundamentais, a arquitetura começa com uma **Rede dARK Mínima Viável (MVDN)**. Esta rede consiste em nós blockchain essenciais que fornecem a funcionalidade fundamental necessária para a operação do sistema. Esses nós gerenciam comunicações RPC/API e mantêm o livro-razão distribuído de identificadores persistentes. Cada nó completo implementa endpoints de API para interação de serviços externos através de balanceamento de carga.
 
-To guarantee continuous operation even during node failures, the architecture incorporates fault-tolerant redundancy through backup nodes and data replication systems. This distributed approach ensures that no single point of failure can compromise the integrity or availability of the PID infrastructure.
+Para garantir operação contínua mesmo durante falhas de nós, a arquitetura incorpora redundância tolerante a falhas através de nós de backup e sistemas de replicação de dados. Esta abordagem distribuída garante que nenhum ponto único de falha possa comprometer a integridade ou disponibilidade da infraestrutura PID.
 
-<h3 class="custom-heading-secondary">Application Layer</h3>
+<h3 class="custom-heading-secondary">Camada de Aplicação</h3>
 
-At the application layer, the dARK dApp delivers the central functionality for managing persistent identifiers through smart contracts. This application logic handles the creation, updating, and resolution of PIDs while enforcing governance rules defined by the network participants.
+Na camada de aplicação, o dARK dApp oferece a funcionalidade central para gerenciar identificadores persistentes através de contratos inteligentes. Esta lógica de aplicação lida com a criação, atualização e resolução de PIDs, aplicando regras de governança definidas pelos participantes da rede.
 
 <div class="architecture-details">
   <div class="detail-box">
-    <h4>Federated Infrastructure</h4>
-    <p>The architecture supports multiple independent blockchain networks operated by different authorities, creating a truly federated PID infrastructure.</p>
+    <h4>Infraestrutura Federada</h4>
+    <p>A arquitetura suporta múltiplas redes blockchain independentes operadas por diferentes autoridades, criando uma infraestrutura PID verdadeiramente federada.</p>
   </div>
   
   <div class="detail-box">
-    <h4>Scalable Design</h4>
-    <p>The system can scale horizontally by adding more nodes to the network, ensuring high performance even with increasing numbers of PIDs.</p>
+    <h4>Design Escalável</h4>
+    <p>O sistema pode escalar horizontalmente adicionando mais nós à rede, garantindo alto desempenho mesmo com números crescentes de PIDs.</p>
   </div>
   
   <div class="detail-box">
-    <h4>Future Extensions</h4>
-    <p>The modular design enables future incorporation of additional storage solutions like IPFS for larger metadata payloads, while maintaining data integrity through on-chain cryptographic verification.</p>
+    <h4>Extensões Futuras</h4>
+    <p>O design modular permite a incorporação futura de soluções de armazenamento adicionais, como IPFS, para cargas de metadados maiores, mantendo a integridade dos dados através de verificação criptográfica na cadeia.</p>
   </div>
 </div>
 
-<h2 class="custom-heading">Ecosystem Integration</h2>
+<h2 class="custom-heading">Integração com o Ecossistema</h2>
 
-The dARK system is designed to integrate seamlessly with the existing scholarly ecosystem, particularly with repository networks, diammond journals and metadata aggregators, following this initial workflow:
+O sistema dARK é projetado para se integrar perfeitamente ao ecossistema acadêmico existente, particularmente com redes de repositórios, periódicos diamante e agregadores de metadados, seguindo este fluxo de trabalho inicial:
 
 <div class="workflow-container">
   <div class="workflow-step">
     <div class="step-number">1</div>
     <div class="step-content">
-      <h4>Metadata Harvesting</h4>
-      <p>Aggregators regularly harvest metadata from institutional repositories, journals, and other content providers through standard protocols like OAI-PMH or custom APIs.</p>
+      <h4>Coleta de Metadados</h4>
+      <p>Agregadores coletam regularmente metadados de repositórios institucionais, periódicos e outros provedores de conteúdo através de protocolos padrão como OAI-PMH ou APIs personalizadas.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-number">2</div>
     <div class="step-content">
-      <h4>PID Assignment</h4>
-      <p>For content without persistent identifiers, the aggregator can request new ARKs through the dARK Minter API. For existing ARKs, they are validated and registered in the dARK system.</p>
+      <h4>Atribuição de PID</h4>
+      <p>Para conteúdo sem identificadores persistentes, o agregador pode solicitar novos ARKs através da API do dARK Minter. Para ARKs existentes, eles são validados e registrados no sistema dARK.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-number">3</div>
     <div class="step-content">
-      <h4>Blockchain Registration</h4>
-      <p>The dARK system records each ARK on the blockchain, along with its target URL and essential metadata, providing a decentralized, tamper-evident registry of identifiers.</p>
+      <h4>Registro no Blockchain</h4>
+      <p>O sistema dARK registra cada ARK no blockchain, juntamente com sua URL de destino e metadados essenciais, fornecendo um registro descentralizado e à prova de adulteração dos identificadores.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-number">4</div>
     <div class="step-content">
-      <h4>PID Distribution</h4>
-      <p>The newly minted or validated ARKs can be sent back to repositories for inclusion in their metadata records, enabling a standardized approach to persistent identification across the network.</p>
+      <h4>Distribuição de PID</h4>
+      <p>Os ARKs recém-criados ou validados podem ser enviados de volta aos repositórios para inclusão em seus registros de metadados, permitindo uma abordagem padronizada para identificação persistente em toda a rede.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-number">5</div>
     <div class="step-content">
-      <h4>Resolution</h4>
-      <p>When a user accesses an ARK, the global resolver redirects to the dARK resolver, which uses the blockchain to retrieve the current location information, ensuring persistent access even when resource locations change.</p>
+      <h4>Resolução</h4>
+      <p>Quando um usuário acessa um ARK, o resolvedor global redireciona para o resolvedor dARK, que usa o blockchain para recuperar as informações de localização atuais, garantindo acesso persistente mesmo quando as localizações dos recursos mudam.</p>
     </div>
   </div>
 </div>
 
-This integration approach enables metadata aggregators like LA Referencia to enhance their services with decentralized PID infrastructure while preserving existing workflows and adding value to the repository network as a whole. It also allows for seamless transitions when repositories move content or change platforms, as the PID resolution system can be updated without breaking external links.
+Esta abordagem de integração permite que agregadores de metadados como LA Referencia aprimorem seus serviços com infraestrutura de PID descentralizada, preservando fluxos de trabalho existentes e agregando valor à rede de repositórios como um todo. Também permite transições perfeitas quando repositórios movem conteúdo ou mudam de plataformas, pois o sistema de resolução de PID pode ser atualizado sem quebrar links externos.
 
 <div class="note-container">
   <div class="note-header">
@@ -168,16 +168,16 @@ This integration approach enables metadata aggregators like LA Referencia to enh
       <line x1="12" y1="8" x2="12" y2="12"></line>
       <line x1="12" y1="16" x2="12.01" y2="16"></line>
     </svg>
-    <h4>Future Development</h4>
+    <h4>Desenvolvimento Futuro</h4>
   </div>
   <div class="note-content">
-    <p>In the next development phases, the dARK project plans to:</p>
+    <p>Nas próximas fases de desenvolvimento, o projeto dARK planeja:</p>
     <ul>
-      <li>Transform this initial project (currently working in IBICT/Brazil) into a comprehensive regional service designed as a public infrastructure, following the principles established by LA Referencia</li>
-      <li>Develop plugins for the most widely used repository and journal systems to facilitate seamless integration with the dARK infrastructure</li>
-      <li>Implement decentralized metadata persistence to preserve bibliographic information and serve as a reliable data source for analytical systems like OpenAlex</li>
+      <li>Transformar este projeto inicial (atualmente em funcionamento no IBICT/Brasil) em um serviço regional abrangente projetado como uma infraestrutura pública, seguindo os princípios estabelecidos pela LA Referencia</li>
+      <li>Desenvolver plugins para os sistemas de repositório e periódicos mais amplamente utilizados para facilitar a integração perfeita com a infraestrutura dARK</li>
+      <li>Implementar persistência de metadados descentralizada para preservar informações bibliográficas e servir como fonte de dados confiável para sistemas analíticos como OpenAlex</li>
     </ul>
-    <p>These enhancements will further strengthen the dARK ecosystem and expand its utility within the scholarly communication landscape across Latin America and beyond.</p>
+    <p>Esses aprimoramentos fortalecerão ainda mais o ecossistema dARK e expandirão sua utilidade dentro do panorama de comunicação acadêmica na América Latina e além.</p>
   </div>
 </div>
 

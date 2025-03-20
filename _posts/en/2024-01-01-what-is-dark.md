@@ -39,7 +39,7 @@ The initial project was primarily hosted and funded by the Brazilian Institute o
     <div class="step-icon"></div>
     <div class="step-content">
       <h4>ARK Persistent Identifier</h4>
-      <p>The ARK identifier has emerged as a <strong>viable, low-cost alternative solution</strong> thanks to the potential implementation of local providers for the global resolver.</p>
+      <p>The ARK identifier has emerged as a <strong>viable, low-cost alternative</strong> due to the possibility of implementing local providers for the global resolver. Its use facilitates <strong>long-term access and preservation</strong> of digital resources, ensuring stable and reliable links.</p>
     </div>
   </div>
   
@@ -47,23 +47,23 @@ The initial project was primarily hosted and funded by the Brazilian Institute o
     <div class="step-icon"></div>
     <div class="step-content">
       <h4>Research Assessment</h4>
-      <p><strong>Need for persistent identifiers</strong> to build more robust research graphs, indicators, and research assessment inputs.</p>
+      <p><strong>Persistent identifiers are essential</strong> for building more robust research graphs, generating accurate indicators, and improving the evaluation of scientific output. Their ability to link various information objects enhances the analysis and understanding of research impact.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Global South Challenges</h4>
-      <p><strong>Lack of persistent identifier coverage</strong> in Global South repositories, primarily due to the costs associated with these services for institutions.</p>
+      <h4>Challenges in the Global South</h4>
+      <p>In Global South countries, the <strong>lack of persistent identifier coverage</strong> is a common issue. This is primarily due to the costs associated with these services, limiting access to essential infrastructures for ensuring the visibility and preservation of research outputs.</p>
     </div>
   </div>
   
   <div class="workflow-step">
     <div class="step-icon"></div>
     <div class="step-content">
-      <h4>Decentralization Need</h4>
-      <p>Most persistent identifier systems are <strong>based on centralized models</strong>, relying on a few agencies that support the service infrastructure.</p>
+      <h4>Need for Decentralization</h4>
+      <p>Currently, most persistent identifier systems operate under <strong>centralized models</strong>, relying on a few agencies to maintain service infrastructure. A decentralized approach, such as the one proposed by dARK, reduces this dependency and increases system resilience, promoting greater equity in access and management of identifiers.</p>
     </div>
   </div>
 </div>
