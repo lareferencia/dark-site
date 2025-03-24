@@ -20,50 +20,50 @@ The Service Layer provides essential services that interface with the Core Layer
 
 <div class="service-components">
   <div class="service-item">
-    <h4><a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">dARK Resolver</a></h4>
+    <h4><a href="https://github.com/dark-pid/dark-resolver" target="_blank">dARK Resolver</a></h4>
     <p>Integrated with the global nt2.info resolver system, enabling persistent identifier resolution</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-resolver" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dark-pid/dark-resolver" target="_blank">Access source code on GitHub</a>
     </div>
   </div>
   
   <div class="service-item">
-    <h4><a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">dARK Minter</a></h4>
+    <h4><a href="https://github.com/dark-pid/hyperdrive" target="_blank">dARK Minter</a></h4>
     <p>Used to create and register new PIDs in the system</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-minter" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dark-pid/hyperdrive" target="_blank">Access source code on GitHub</a>
     </div>
   </div>
   
   <div class="service-item">
-    <h4><a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">dARK Dashboard</a></h4>
+    <h4><span class="disabled-link">dARK Dashboard</span></h4>
     <p>Provides monitoring and administrative capabilities for the platform</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-dashboard" target="_blank">Access source code on GitHub</a>
+      <span class="disabled-link">Access source code on GitHub</span>
     </div>
   </div>
   
   <div class="service-item">
-    <h4><a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">dARK API</a></h4>
+    <h4><a href="https://github.com/dark-pid/dark-gateway" target="_blank">dARK API</a></h4>
     <p>Facilitates communication between applications and the underlying blockchain</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-api" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/dark-pid/dark-gateway" target="_blank">Access source code on GitHub</a>
     </div>
   </div>
   
   <div class="service-item">
-    <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK Backup</a></h4>
+    <h4><span class="disabled-link">dARK Backup</span></h4>
     <p>Ensures data durability and system reliability</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+      <span class="disabled-link">Access source code on GitHub</span>
     </div>
   </div>
 
   <div class="service-item">
-    <h4><a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">dARK LA Referencia</a></h4>
+    <h4><a href="https://github.com/lareferencia/lareferencia-dark-lib" target="_blank">dARK LA Referencia</a></h4>
     <p>Implements bulk dARK minting on LA Referencia Harvester Plasform</p>
     <div class="code-access">
-      <a href="https://github.com/dARKf3n1Xx/dark-backup" target="_blank">Access source code on GitHub</a>
+      <a href="https://github.com/lareferencia/lareferencia-dark-lib" target="_blank">Access source code on GitHub</a>
     </div>
   </div>
 </div>
@@ -74,11 +74,25 @@ These services are supported by load balancing mechanisms to ensure high availab
 
 The Core Layer is built on a permissioned blockchain network that forms the backbone of the dARK system. At its heart is a public permissioned network operating on a Proof of Authority (PoA) consensus mechanism, providing both security and efficiency for PID management.
 
+<div class="disclaimer-box">
+  <div class="disclaimer-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A3691" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+      <line x1="12" y1="9" x2="12" y2="13"></line>
+      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+    </svg>
+  </div>
+  <div class="disclaimer-content">
+    <h4>Open Source Disclaimer</h4>
+    <p>All dARK code is open source and available to the community. However, dARK is a project in constant evolution, testing, and improvement. Therefore, we do not recommend creating parallel implementations of dARK at this time. We are open to code contributions and testing in pilot environments, and encourage community participation through these channels.</p>
+  </div>
+</div>
+
 <div class="service-item core-app">
-  <h4><a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">dARK dApp</a></h4>
+  <h4><a href="https://github.com/dark-pid/dARK" target="_blank">dARK dApp</a></h4>
   <p>Core decentralized application that implements the PID management smart contracts and ensures data integrity through blockchain technology</p>
   <div class="code-access">
-    <a href="https://github.com/dARKf3n1Xx/dark-dapp" target="_blank">Access source code on GitHub</a>
+    <a href="https://github.com/dark-pid/dARK" target="_blank">Access source code on GitHub</a>
   </div>
 </div>
 
@@ -180,6 +194,47 @@ This integration approach enables metadata aggregators like LA Referencia to enh
     <p>These enhancements will further strengthen the dARK ecosystem and expand its utility within the scholarly communication landscape across Latin America and beyond.</p>
   </div>
 </div>
+
+<style>
+.disabled-link {
+  color: #333;
+  font-weight: 500;
+  cursor: default;
+  text-decoration: none;
+}
+
+.disclaimer-box {
+  display: flex;
+  background-color: #f8f4f9;
+  border-left: 4px solid #8A3691;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.disclaimer-icon {
+  flex-shrink: 0;
+  margin-right: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.disclaimer-content {
+  flex-grow: 1;
+}
+
+.disclaimer-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #8A3691;
+}
+
+.disclaimer-content p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+</style>
 
 
 
