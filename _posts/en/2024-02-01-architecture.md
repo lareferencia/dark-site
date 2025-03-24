@@ -84,7 +84,7 @@ The Core Layer is built on a permissioned blockchain network that forms the back
   </div>
   <div class="disclaimer-content">
     <h4>Open Source Disclaimer</h4>
-    <p>All dARK code is open source and available to the community. However, dARK is a project in constant evolution, testing, and improvement. Therefore, we do not recommend creating parallel implementations of dARK at this time. We are open to code contributions and testing in pilot environments, and encourage community participation through these channels.</p>
+    <p>All dARK code is open source and available to the community. However, dARK is a project in constant evolution, testing, and improvement. Therefore, we do not recommend creating production level implementations of dARK for the moment. We are open to code contributions and testing in pilot environments, and encourage community participation through these channels.</p>
   </div>
 </div>
 
