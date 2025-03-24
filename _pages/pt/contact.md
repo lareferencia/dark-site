@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Contact"
-description: "Get in touch with the dARK team"
+title: "Contato"
+description: "Entre em contato com a equipe dARK"
 language: pt
 language_reference: contact
 published: true
@@ -9,11 +9,11 @@ order: 3
 ---
 
 <div class="contact-header">
-  <h1>Contact</h1>
-  <p class="lead-text">Have questions or want to learn more about dARK? We'd love to hear from you.</p>
+  <h1>Contato</h1>
+  <p class="lead-text">Tem perguntas ou quer saber mais sobre o dARK? Adoraríamos ouvir de você.</p>
 </div>
 
-<h2 class="custom-heading">Get in Touch</h2>
+<h2 class="custom-heading">Entre em Contato</h2>
 
 <div class="contact-card">
   <div class="contact-card-background"></div>
@@ -26,8 +26,8 @@ order: 3
         <line x1="17" y1="14" x2="22" y2="19" />
       </svg>
     </div>
-    <h3>Email Us</h3>
-    <p class="contact-description">For all inquiries related to the dARK project, please contact us at:</p>
+    <h3>Envie-nos um Email</h3>
+    <p class="contact-description">Para todas as consultas relacionadas ao projeto dARK, entre em contato conosco em:</p>
     <a href="mailto:lareferencia@lareferencia.redclara.net" class="contact-email-link">
       <span>lareferencia@lareferencia.redclara.net</span>
       <i class="fas fa-arrow-right"></i>
@@ -35,17 +35,17 @@ order: 3
   </div>
 </div>
 
-<h2 class="custom-heading">Supporting dARK as a Funder</h2>
+<h2 class="custom-heading">Apoiar o dARK como Financiador</h2>
 
 <div class="funding-info">
-  <p>The dARK project relies on the generous support of organizations committed to building a sustainable, decentralized persistent identifier infrastructure for global open science. By becoming a funder, you'll join a community of forward-thinking institutions helping to advance open science globally.</p>
+  <p>O projeto dARK conta com o generoso apoio de organizações comprometidas em construir uma infraestrutura sustentável e descentralizada de identificadores persistentes para a ciência aberta global. Ao se tornar um financiador, você se juntará a uma comunidade de instituições visionárias que ajudam a promover a ciência aberta globalmente.</p>
   
-  <h3 class="custom-heading-secondary">Why Support dARK?</h3>
+  <h3 class="custom-heading-secondary">Por que Apoiar o dARK?</h3>
   <ul>
-    <li>Contribute to critical open science infrastructure</li>
-    <li>Support a decentralized approach to persistent identifiers</li>
-    <li>Strengthen research data sovereignty in Latin America and beyond</li>
-    <li>Help create a more inclusive and equitable scientific ecosystem</li>
+    <li>Contribuir para uma infraestrutura crítica de ciência aberta</li>
+    <li>Apoiar uma abordagem descentralizada para identificadores persistentes</li>
+    <li>Fortalecer a soberania dos dados de pesquisa na América Latina e além</li>
+    <li>Ajude a criar um ecossistema científico mais inclusivo e equitativo</li>
   </ul>
   
   <div class="note-container">
@@ -55,10 +55,10 @@ order: 3
         <line x1="12" y1="8" x2="12" y2="12"></line>
         <line x1="12" y1="16" x2="12.01" y2="16"></line>
       </svg>
-      <h4>Ready to Support dARK?</h4>
+      <h4>Pronto para Apoiar o dARK?</h4>
     </div>
     <div class="note-content">
-      <p>Contact us to discuss how your organization can contribute to building sustainable open science infrastructure.</p>
+      <p>Entre em contato conosco para discutir como sua organização pode contribuir para a construção de uma infraestrutura sustentável de ciência aberta.</p>
       <a href="mailto:lareferencia@lareferencia.redclara.net" class="contact-link">lareferencia@lareferencia.redclara.net</a>
     </div>
   </div>
@@ -104,13 +104,13 @@ order: 3
     margin: 2rem 0 3rem;
   }
   
-  /* Estilos importados de architecture.md - modificados para ser más pequeños */
+  /* Estilos importados de architecture.md - modificados para ser mais pequenos */
   .custom-heading {
-    font-size: 1.25rem; /* Reducido de 1.4rem */
+    font-size: 1.25rem; /* Reduzido de 1.4rem */
     color: #8A3691;
     position: relative;
-    margin-bottom: 1.25rem; /* Reducido de 1.5rem */
-    padding-bottom: 0.4rem; /* Reducido de 0.5rem */
+    margin-bottom: 1.25rem; /* Reduzido de 1.5rem */
+    padding-bottom: 0.4rem; /* Reduzido de 0.5rem */
     font-weight: 600;
     border-bottom: 2px solid #eaeaea;
   }
@@ -120,34 +120,34 @@ order: 3
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 50px; /* Reducido de 60px */
+    width: 50px; /* Reduzido de 60px */
     height: 2px;
     background-color: #8A3691;
   }
   
   .custom-heading-secondary {
-    font-size: 1.1rem; /* Reducido de 1.2rem */
+    font-size: 1.1rem; /* Reduzido de 1.2rem */
     color: #555;
-    margin-top: 1.25rem; /* Reducido de 1.5rem */
-    margin-bottom: 0.85rem; /* Reducido de 1rem */
+    margin-top: 1.25rem; /* Reduzido de 1.5rem */
+    margin-bottom: 0.85rem; /* Reduzido de 1rem */
     font-weight: 500;
   }
   
-  /* Note container styling - ajustado para títulos más pequeños */
+  /* Note container styling - ajustado para títulos mais pequenos */
   .note-header h4 {
     color: #8A3691;
     margin: 0;
-    font-size: 1rem; /* Reducido de 1.1rem */
+    font-size: 1rem; /* Reduzido de 1.1rem */
     font-weight: 600;
     flex-grow: 1;
   }
   
-  /* Reducción del tamaño del título principal */
+  /* Redução do tamanho do título principal */
   .contact-header h1 {
-    font-size: 1.8rem; /* Tamaño más pequeño para el título principal */
+    font-size: 1.8rem; /* Tamanho mais pequeno para o título principal */
   }
   
-  /* Reducción del tamaño de otros títulos h3 */
+  /* Redução do tamanho de outros títulos h3 */
   .contact-main h3 {
     font-size: 1.15rem;
     margin-bottom: 0.75rem;
@@ -178,7 +178,7 @@ order: 3
   .note-header h4 {
     color: #8A3691;
     margin: 0;
-    font-size: 1rem; /* Reducido de 1.1rem */
+    font-size: 1rem; /* Reduzido de 1.1rem */
     font-weight: 600;
     flex-grow: 1;
   }
@@ -194,7 +194,7 @@ order: 3
     margin-bottom: 0;
   }
   
-  /* Estilos mejorados para la sección Get in Touch */
+  /* Estilos melhorados para a seção Entre em Contato */
   .contact-card {
     max-width: 600px;
     margin: 2rem auto 3rem;
@@ -256,7 +256,7 @@ order: 3
     transform: scale(1.12);
   }
   
-  /* Quitar el estilo Font Awesome anterior */
+  /* Quitar o estilo Font Awesome anterior */
   .fas.fa-envelope {
     display: none;
   }

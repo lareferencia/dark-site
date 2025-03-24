@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Funders"
+title: "Financiadores"
 description: "Organizaciones que apoyan el proyecto dARK"
 language: es
 language_reference: funders

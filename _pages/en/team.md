@@ -50,7 +50,7 @@ order: 1
       <h3>Thiago Nóbrega</h3>
       <span class="team-member-role">Architecture, Blockchain Development, and Infrastructure</span>
     </div>
-    <div class="team-member-org">IBICT, BRAZIL</div>
+    <div class="team-member-org">UFCG, BRAZIL</div>
   </div>
 
   <div class="team-member">
